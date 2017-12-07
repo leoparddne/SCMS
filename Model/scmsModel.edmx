@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="scmsModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="club">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="state" Type="int" Nullable="false" />
+          <Property Name="logo" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="date" Type="datetime" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="clubactivity">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="clubID" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="place" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="time" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="other" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="clubmanager">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cludID" Type="int" Nullable="false" />
+          <Property Name="userID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="clubmember">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userid" Type="int" Nullable="false" />
+          <Property Name="clubid" Type="int" Nullable="false" />
+          <Property Name="date" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="comment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="actID" Type="int" Nullable="false" />
+          <Property Name="text" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="time" Type="datetime" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="newclub">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="userID" Type="int" Nullable="false" />
+          <Property Name="logo" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="describe" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="newmember">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userID" Type="int" Nullable="false" />
+          <Property Name="clubID" Type="int" Nullable="false" />
+          <Property Name="time" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="checkTime" Type="datetime" Precision="0" />
+          <Property Name="checkUser" Type="int" />
+          <Property Name="state" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="teacher">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="sex" Type="int" Nullable="false" />
+          <Property Name="age" Type="int" Nullable="false" />
+          <Property Name="class" Type="varchar" MaxLength="10" />
+          <Property Name="department" Type="int" />
+        </EntityType>
+        <EntityContainer Name="scmsModelStoreContainer">
+          <EntitySet Name="club" EntityType="Self.club" Schema="scms" store:Type="Tables" />
+          <EntitySet Name="clubactivity" EntityType="Self.clubactivity" Schema="scms" store:Type="Tables" />
+          <EntitySet Name="clubmanager" EntityType="Self.clubmanager" Schema="scms" store:Type="Tables" />
+          <EntitySet Name="clubmember" EntityType="Self.clubmember" Schema="scms" store:Type="Tables" />
+          <EntitySet Name="comment" EntityType="Self.comment" Schema="scms" store:Type="Tables" />
+          <EntitySet Name="newclub" EntityType="Self.newclub" Schema="scms" store:Type="Tables" />
+          <EntitySet Name="newmember" EntityType="Self.newmember" Schema="scms" store:Type="Tables" />
+          <EntitySet Name="teacher" EntityType="Self.teacher" Schema="scms" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="scms" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="scmsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="club">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="state" Type="Int32" Nullable="false" />
+          <Property Name="logo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="date" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="clubactivity">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="clubID" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="place" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="time" Type="DateTime" Nullable="false" />
+          <Property Name="other" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="clubmanager">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cludID" Type="Int32" Nullable="false" />
+          <Property Name="userID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="clubmember">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userid" Type="Int32" Nullable="false" />
+          <Property Name="clubid" Type="Int32" Nullable="false" />
+          <Property Name="date" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="comment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="actID" Type="Int32" Nullable="false" />
+          <Property Name="text" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="time" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="newclub">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="userID" Type="Int32" Nullable="false" />
+          <Property Name="logo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="describe" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="newmember">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userID" Type="Int32" Nullable="false" />
+          <Property Name="clubID" Type="Int32" Nullable="false" />
+          <Property Name="time" Type="DateTime" Nullable="false" />
+          <Property Name="checkTime" Type="DateTime" />
+          <Property Name="checkUser" Type="Int32" />
+          <Property Name="state" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="teacher">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sex" Type="Int32" Nullable="false" />
+          <Property Name="age" Type="Int32" Nullable="false" />
+          <Property Name="class" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="department" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="scmsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="club" EntityType="Self.club" />
+          <EntitySet Name="clubactivity" EntityType="Self.clubactivity" />
+          <EntitySet Name="clubmanager" EntityType="Self.clubmanager" />
+          <EntitySet Name="clubmember" EntityType="Self.clubmember" />
+          <EntitySet Name="comment" EntityType="Self.comment" />
+          <EntitySet Name="newclub" EntityType="Self.newclub" />
+          <EntitySet Name="newmember" EntityType="Self.newmember" />
+          <EntitySet Name="teacher" EntityType="Self.teacher" />
+          <EntitySet Name="user" EntityType="Self.user" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="scmsModelStoreContainer" CdmEntityContainer="scmsEntities">
+          <EntitySetMapping Name="club">
+            <EntityTypeMapping TypeName="scmsModel.club">
+              <MappingFragment StoreEntitySet="club">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="logo" ColumnName="logo" />
+                <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="clubactivity">
+            <EntityTypeMapping TypeName="scmsModel.clubactivity">
+              <MappingFragment StoreEntitySet="clubactivity">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="clubID" ColumnName="clubID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="place" ColumnName="place" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="other" ColumnName="other" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="clubmanager">
+            <EntityTypeMapping TypeName="scmsModel.clubmanager">
+              <MappingFragment StoreEntitySet="clubmanager">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cludID" ColumnName="cludID" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="clubmember">
+            <EntityTypeMapping TypeName="scmsModel.clubmember">
+              <MappingFragment StoreEntitySet="clubmember">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="clubid" ColumnName="clubid" />
+                <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="comment">
+            <EntityTypeMapping TypeName="scmsModel.comment">
+              <MappingFragment StoreEntitySet="comment">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="actID" ColumnName="actID" />
+                <ScalarProperty Name="text" ColumnName="text" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="newclub">
+            <EntityTypeMapping TypeName="scmsModel.newclub">
+              <MappingFragment StoreEntitySet="newclub">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="logo" ColumnName="logo" />
+                <ScalarProperty Name="describe" ColumnName="describe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="newmember">
+            <EntityTypeMapping TypeName="scmsModel.newmember">
+              <MappingFragment StoreEntitySet="newmember">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="clubID" ColumnName="clubID" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="checkTime" ColumnName="checkTime" />
+                <ScalarProperty Name="checkUser" ColumnName="checkUser" />
+                <ScalarProperty Name="state" ColumnName="state" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="teacher">
+            <EntityTypeMapping TypeName="scmsModel.teacher">
+              <MappingFragment StoreEntitySet="teacher">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user">
+            <EntityTypeMapping TypeName="scmsModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="class" ColumnName="class" />
+                <ScalarProperty Name="department" ColumnName="department" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

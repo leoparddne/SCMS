@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,13 +44,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
@@ -88,9 +84,8 @@
       <HintPath>..\packages\MySql.Data.6.9.10\lib\net45\MySql.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.Entity.6.9.3\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="MySql.Data.Entity.EF5, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.7.9\lib\net45\MySql.Data.Entity.EF5.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.DynamicData" />
@@ -134,6 +129,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Areas\student\Views\Login\Login.cshtml" />
     <Content Include="Content\admin\css\admin.css" />
     <Content Include="Content\admin\css\amazeui.css" />
     <Content Include="Content\admin\css\amazeui.datatables.min.css" />
@@ -232,6 +228,38 @@
     <Content Include="Content\images\services\4.jpg" />
     <Content Include="Content\images\slider\1.jpg" />
     <Content Include="Content\images\slider\2.jpg" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\functions.js" />
+    <Content Include="Content\js\gmap3.js" />
+    <Content Include="Content\js\index.html" />
+    <Content Include="Content\js\jquery-1.11.2.min.js" />
+    <Content Include="Content\js\jquery-2.1.0.min.js" />
+    <Content Include="Content\js\jquery.ajaxchimp.min.js" />
+    <Content Include="Content\js\jquery.fitvids.js" />
+    <Content Include="Content\js\jquery.magnific-popup.min.js" />
+    <Content Include="Content\js\modernizr-2.8.3.min.js" />
+    <Content Include="Content\js\plugins.js" />
+    <Content Include="Content\js\wow.min.js" />
+    <Content Include="Content\login\askgreen.png" />
+    <Content Include="Content\login\errorred.png" />
+    <Content Include="Content\login\google_jquery-ui.min.js" />
+    <Content Include="Content\login\google_jquery.min.js" />
+    <Content Include="Content\login\JQuery.cookie.js" />
+    <Content Include="Content\login\jquery.pagination.js" />
+    <Content Include="Content\login\jquery.ui.all.css" />
+    <Content Include="Content\login\loading1.gif" />
+    <Content Include="Content\login\loadingpn.gif" />
+    <Content Include="Content\login\login.js" />
+    <Content Include="Content\login\login_bgx.gif" />
+    <Content Include="Content\login\login_m_bg.png" />
+    <Content Include="Content\login\logo.png" />
+    <Content Include="Content\login\okgreen.png" />
+    <Content Include="Content\login\pagination.css" />
+    <Content Include="Content\login\site_bg.png" />
+    <Content Include="Content\login\style.css" />
+    <Content Include="Content\login\style_log.css" />
+    <Content Include="Content\login\userpanel.css" />
+    <Content Include="Content\login\webtemples.js" />
     <Content Include="Content\media\index.html" />
     <Content Include="Content\media\justin_bieber_eenie_meenie.mp3" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -269,6 +297,8 @@
     <Content Include="Content\admin\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\admin\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\admin\fonts\FontAwesome.otf" />
+    <Content Include="Areas\student\Views\web.config" />
+    <Content Include="Content\js\jquery-2.1.0.min.map" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -282,6 +312,8 @@
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\manager\managerAreaRegistration.cs" />
+    <Compile Include="Areas\student\Controllers\LoginController.cs" />
+    <Compile Include="Areas\student\studentAreaRegistration.cs" />
     <Compile Include="Areas\teacher\teacherAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -319,6 +351,8 @@
     <Folder Include="Areas\manager\Controllers\" />
     <Folder Include="Areas\manager\Models\" />
     <Folder Include="Areas\manager\Views\Shared\" />
+    <Folder Include="Areas\student\Models\" />
+    <Folder Include="Areas\student\Views\Shared\" />
     <Folder Include="Areas\teacher\Controllers\" />
     <Folder Include="Areas\teacher\Models\" />
     <Folder Include="Areas\teacher\Views\Shared\" />

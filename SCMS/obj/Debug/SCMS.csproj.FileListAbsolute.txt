@@ -110,3 +110,4 @@ E:\SCMS\SCMS\SCMS\bin\zh-Hans\System.Web.Mvc.resources.dll
 E:\SCMS\SCMS\SCMS\obj\Debug\SCMS.csprojResolveAssemblyReference.cache
 E:\SCMS\SCMS\SCMS\obj\Debug\SCMS.dll
 E:\SCMS\SCMS\SCMS\obj\Debug\SCMS.pdb
+E:\SCMS\SCMS\SCMS\obj\Debug\SCMS.csproj.CoreCompileInputs.cache
