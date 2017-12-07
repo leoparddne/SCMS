@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="scmsModelStoreContainer" CdmEntityContainer="scmsEntities">
+    <EntitySetMapping Name="club">
+      <EntityTypeMapping TypeName="scmsModel.club">
+        <MappingFragment StoreEntitySet="club">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clubactivity">
+      <EntityTypeMapping TypeName="scmsModel.clubactivity">
+        <MappingFragment StoreEntitySet="clubactivity">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="clubID" ColumnName="clubID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="place" ColumnName="place" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="other" ColumnName="other" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clubmanager">
+      <EntityTypeMapping TypeName="scmsModel.clubmanager">
+        <MappingFragment StoreEntitySet="clubmanager">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cludID" ColumnName="cludID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clubmember">
+      <EntityTypeMapping TypeName="scmsModel.clubmember">
+        <MappingFragment StoreEntitySet="clubmember">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="clubid" ColumnName="clubid" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comment">
+      <EntityTypeMapping TypeName="scmsModel.comment">
+        <MappingFragment StoreEntitySet="comment">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="actID" ColumnName="actID" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="newclub">
+      <EntityTypeMapping TypeName="scmsModel.newclub">
+        <MappingFragment StoreEntitySet="newclub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="describe" ColumnName="describe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="newmember">
+      <EntityTypeMapping TypeName="scmsModel.newmember">
+        <MappingFragment StoreEntitySet="newmember">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="clubID" ColumnName="clubID" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="checkTime" ColumnName="checkTime" />
+          <ScalarProperty Name="checkUser" ColumnName="checkUser" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="teacher">
+      <EntityTypeMapping TypeName="scmsModel.teacher">
+        <MappingFragment StoreEntitySet="teacher">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="scmsModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="department" ColumnName="department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

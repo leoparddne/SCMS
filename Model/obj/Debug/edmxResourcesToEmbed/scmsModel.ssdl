@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="scmsModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="club">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="state" Type="int" Nullable="false" />
+    <Property Name="logo" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="date" Type="datetime" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clubactivity">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="clubID" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="place" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="time" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="other" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="clubmanager">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cludID" Type="int" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clubmember">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="clubid" Type="int" Nullable="false" />
+    <Property Name="date" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="actID" Type="int" Nullable="false" />
+    <Property Name="text" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="time" Type="datetime" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="newclub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="logo" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="describe" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="newmember">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="clubID" Type="int" Nullable="false" />
+    <Property Name="time" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="checkTime" Type="datetime" Precision="0" />
+    <Property Name="checkUser" Type="int" />
+    <Property Name="state" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="teacher">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="sex" Type="int" Nullable="false" />
+    <Property Name="age" Type="int" Nullable="false" />
+    <Property Name="class" Type="varchar" MaxLength="10" />
+    <Property Name="department" Type="int" />
+  </EntityType>
+  <EntityContainer Name="scmsModelStoreContainer">
+    <EntitySet Name="club" EntityType="Self.club" Schema="scms" store:Type="Tables" />
+    <EntitySet Name="clubactivity" EntityType="Self.clubactivity" Schema="scms" store:Type="Tables" />
+    <EntitySet Name="clubmanager" EntityType="Self.clubmanager" Schema="scms" store:Type="Tables" />
+    <EntitySet Name="clubmember" EntityType="Self.clubmember" Schema="scms" store:Type="Tables" />
+    <EntitySet Name="comment" EntityType="Self.comment" Schema="scms" store:Type="Tables" />
+    <EntitySet Name="newclub" EntityType="Self.newclub" Schema="scms" store:Type="Tables" />
+    <EntitySet Name="newmember" EntityType="Self.newmember" Schema="scms" store:Type="Tables" />
+    <EntitySet Name="teacher" EntityType="Self.teacher" Schema="scms" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="Self.user" Schema="scms" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

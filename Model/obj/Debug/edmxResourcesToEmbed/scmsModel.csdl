@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="scmsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="club">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="logo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clubactivity">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clubID" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="place" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="time" Type="DateTime" Nullable="false" />
+    <Property Name="other" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="clubmanager">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cludID" Type="Int32" Nullable="false" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clubmember">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="Int32" Nullable="false" />
+    <Property Name="clubid" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="actID" Type="Int32" Nullable="false" />
+    <Property Name="text" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="time" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="newclub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="logo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="describe" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="newmember">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="clubID" Type="Int32" Nullable="false" />
+    <Property Name="time" Type="DateTime" Nullable="false" />
+    <Property Name="checkTime" Type="DateTime" />
+    <Property Name="checkUser" Type="Int32" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="teacher">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sex" Type="Int32" Nullable="false" />
+    <Property Name="age" Type="Int32" Nullable="false" />
+    <Property Name="class" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="department" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="scmsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="club" EntityType="Self.club" />
+    <EntitySet Name="clubactivity" EntityType="Self.clubactivity" />
+    <EntitySet Name="clubmanager" EntityType="Self.clubmanager" />
+    <EntitySet Name="clubmember" EntityType="Self.clubmember" />
+    <EntitySet Name="comment" EntityType="Self.comment" />
+    <EntitySet Name="newclub" EntityType="Self.newclub" />
+    <EntitySet Name="newmember" EntityType="Self.newmember" />
+    <EntitySet Name="teacher" EntityType="Self.teacher" />
+    <EntitySet Name="user" EntityType="Self.user" />
+  </EntityContainer>
+</Schema>

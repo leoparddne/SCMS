@@ -67,7 +67,6 @@ E:\SCMS\SCMS\SCMS\bin\SCMS.dll.config
 E:\SCMS\SCMS\SCMS\bin\SCMS.dll
 E:\SCMS\SCMS\SCMS\bin\SCMS.pdb
 E:\SCMS\SCMS\SCMS\bin\EntityFramework.dll
-E:\SCMS\SCMS\SCMS\bin\EntityFramework.SqlServer.dll
 E:\SCMS\SCMS\SCMS\bin\Microsoft.AI.Agent.Intercept.dll
 E:\SCMS\SCMS\SCMS\bin\Microsoft.AI.DependencyCollector.dll
 E:\SCMS\SCMS\SCMS\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -78,7 +77,6 @@ E:\SCMS\SCMS\SCMS\bin\Microsoft.ApplicationInsights.dll
 E:\SCMS\SCMS\SCMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\SCMS\SCMS\SCMS\bin\Microsoft.Web.Infrastructure.dll
 E:\SCMS\SCMS\SCMS\bin\MySql.Data.dll
-E:\SCMS\SCMS\SCMS\bin\MySql.Data.Entity.EF6.dll
 E:\SCMS\SCMS\SCMS\bin\System.Web.Helpers.dll
 E:\SCMS\SCMS\SCMS\bin\System.Web.Mvc.dll
 E:\SCMS\SCMS\SCMS\bin\System.Web.Razor.dll
@@ -86,7 +84,6 @@ E:\SCMS\SCMS\SCMS\bin\System.Web.Webpages.Deployment.dll
 E:\SCMS\SCMS\SCMS\bin\System.Web.Webpages.dll
 E:\SCMS\SCMS\SCMS\bin\System.Web.Webpages.Razor.dll
 E:\SCMS\SCMS\SCMS\bin\EntityFramework.xml
-E:\SCMS\SCMS\SCMS\bin\EntityFramework.SqlServer.xml
 E:\SCMS\SCMS\SCMS\bin\Microsoft.AI.DependencyCollector.xml
 E:\SCMS\SCMS\SCMS\bin\Microsoft.AI.ServerTelemetryChannel.xml
 E:\SCMS\SCMS\SCMS\bin\Microsoft.AI.Web.xml
@@ -100,7 +97,6 @@ E:\SCMS\SCMS\SCMS\bin\System.Web.Webpages.Razor.xml
 E:\SCMS\SCMS\SCMS\bin\System.Web.Helpers.xml
 E:\SCMS\SCMS\SCMS\bin\System.Web.Mvc.xml
 E:\SCMS\SCMS\SCMS\bin\zh-Hans\EntityFramework.resources.dll
-E:\SCMS\SCMS\SCMS\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
 E:\SCMS\SCMS\SCMS\bin\zh-Hans\System.Web.Razor.resources.dll
 E:\SCMS\SCMS\SCMS\bin\zh-Hans\System.Web.Webpages.resources.dll
 E:\SCMS\SCMS\SCMS\bin\zh-Hans\System.Web.Webpages.Deployment.resources.dll
@@ -111,3 +107,4 @@ E:\SCMS\SCMS\SCMS\obj\Debug\SCMS.csprojResolveAssemblyReference.cache
 E:\SCMS\SCMS\SCMS\obj\Debug\SCMS.dll
 E:\SCMS\SCMS\SCMS\obj\Debug\SCMS.pdb
 E:\SCMS\SCMS\SCMS\obj\Debug\SCMS.csproj.CoreCompileInputs.cache
+E:\SCMS\SCMS\SCMS\bin\MySql.Data.Entity.EF5.dll

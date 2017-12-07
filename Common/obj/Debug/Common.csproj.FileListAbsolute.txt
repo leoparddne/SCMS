@@ -1,0 +1,6 @@
+E:\SCMS\SCMS\Common\bin\Debug\Common.dll
+E:\SCMS\SCMS\Common\bin\Debug\Common.pdb
+E:\SCMS\SCMS\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\SCMS\SCMS\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\SCMS\SCMS\Common\obj\Debug\Common.dll
+E:\SCMS\SCMS\Common\obj\Debug\Common.pdb
