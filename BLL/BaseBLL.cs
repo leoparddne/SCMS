@@ -33,6 +33,14 @@ namespace BLL
         {
             return CurrentRepository.GetModel(condition);
         }
+        public T GetModelById(params object[] keyValues)
+        {
+            return CurrentRepository.GetModelById(keyValues);
+        }
+        public bool Exist(Expression<Func<T, bool>> condition)
+        {
+            return CurrentRepository.Exist(condition);
+        }
 
         public void Add(T model)
         {

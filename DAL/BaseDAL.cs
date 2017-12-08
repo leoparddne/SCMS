@@ -30,12 +30,24 @@ namespace DAL
             return DataContext.Set<T>().Where(condition).FirstOrDefault();
         }
 
+        public virtual T GetModelById(params object[] keyValues)
+        {
+            return DataContext.Set<T>().Find(keyValues);
+        }
 
         #region 新增
         public void Add(T model)
         {
             DataContext.Set<T>().Add(model);
             SaveChanges();
+        }
+
+        public bool Exist(Expression<Func<T, bool>> condition)
+        {
+            bool result = false;
+            if (DataContext.Set<T>().Count(condition) == 1)
+                result = true;
+            return result;
         }
         #endregion
 

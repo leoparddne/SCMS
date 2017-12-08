@@ -14,8 +14,8 @@ namespace Model
     
     public partial class user
     {
-        public int id { get; set; }
         public string name { get; set; }
+        public int id { get; set; }
         public string pwd { get; set; }
         public int sex { get; set; }
         public int age { get; set; }

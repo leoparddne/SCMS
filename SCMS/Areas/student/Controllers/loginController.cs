@@ -16,15 +16,24 @@ namespace SCMS.Areas.student.Controllers
         {
             return View();
         }
-        public void checkPwd()
+        public ActionResult checkPwd()
         {
             string pwd = Request.Params["pwd"];
             string username = Request.Params["username"];
-            BLL.user bll = new BLL.user();
-            var result=Common.Auth.CheckPwd(pwd, username);
-            //ClubBLL bll = new ClubBLL();
-            //var model = bll.GetModel(p => p.id == 2);
-            //return View();
+
+            try
+            {
+                var result = Common.Auth.CheckPwd(pwd, username);
+
+                if (result)
+                    return Redirect("/student/Home");
+                else
+                    return Redirect("/student/Login/Login?errorMSG=1");
+            }
+            catch (Exception)
+            {
+                return Redirect("/student/Login/Login?errorMSG=1");
+            }
         }
     }
 }

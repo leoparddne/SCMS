@@ -83,10 +83,10 @@
         </EntityType>
         <EntityType Name="user">
           <Key>
-            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
           </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" />
           <Property Name="pwd" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="sex" Type="int" Nullable="false" />
           <Property Name="age" Type="int" Nullable="false" />
@@ -197,10 +197,10 @@
         </EntityContainer>
         <EntityType Name="user">
           <Key>
-            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
           </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="pwd" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
           <Property Name="sex" Type="Int32" Nullable="false" />
           <Property Name="age" Type="Int32" Nullable="false" />
@@ -305,8 +305,8 @@
                 <ScalarProperty Name="age" ColumnName="age" />
                 <ScalarProperty Name="sex" ColumnName="sex" />
                 <ScalarProperty Name="pwd" ColumnName="pwd" />
-                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

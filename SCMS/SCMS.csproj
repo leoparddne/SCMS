@@ -134,6 +134,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\student\Views\Home\index.cshtml" />
+    <Content Include="Areas\manager\Views\Home\index.cshtml" />
+    <Content Include="Areas\manager\Views\Login\Login.cshtml" />
     <None Include="Areas\student\Views\Login\Login.cshtml" />
     <Content Include="Content\admin\css\admin.css" />
     <Content Include="Content\admin\css\amazeui.css" />
@@ -234,6 +237,7 @@
     <Content Include="Content\images\slider\1.jpg" />
     <Content Include="Content\images\slider\2.jpg" />
     <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\common.js" />
     <Content Include="Content\js\functions.js" />
     <Content Include="Content\js\gmap3.js" />
     <Content Include="Content\js\index.html" />
@@ -304,6 +308,8 @@
     <Content Include="Content\admin\fonts\FontAwesome.otf" />
     <Content Include="Areas\student\Views\web.config" />
     <Content Include="Content\js\jquery-2.1.0.min.map" />
+    <Content Include="Areas\teacher\Views\Home\index.cshtml" />
+    <Content Include="Areas\teacher\Views\Login\Login.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -316,9 +322,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\manager\Controllers\HomeController.cs" />
+    <Compile Include="Areas\manager\Controllers\LoginController.cs" />
     <Compile Include="Areas\manager\managerAreaRegistration.cs" />
+    <Compile Include="Areas\student\Controllers\HomeController.cs" />
     <Compile Include="Areas\student\Controllers\LoginController.cs" />
     <Compile Include="Areas\student\studentAreaRegistration.cs" />
+    <Compile Include="Areas\teacher\Controllers\HomeController.cs" />
+    <Compile Include="Areas\teacher\Controllers\LoginController.cs" />
     <Compile Include="Areas\teacher\teacherAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -353,12 +364,10 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\admin\Models\" />
     <Folder Include="Areas\admin\Views\Shared\" />
-    <Folder Include="Areas\manager\Controllers\" />
     <Folder Include="Areas\manager\Models\" />
     <Folder Include="Areas\manager\Views\Shared\" />
     <Folder Include="Areas\student\Models\" />
     <Folder Include="Areas\student\Views\Shared\" />
-    <Folder Include="Areas\teacher\Controllers\" />
     <Folder Include="Areas\teacher\Models\" />
     <Folder Include="Areas\teacher\Views\Shared\" />
     <Folder Include="Models\" />

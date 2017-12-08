@@ -89,10 +89,10 @@
   </EntityContainer>
   <EntityType Name="user">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="Int32" Nullable="false" />
     <Property Name="pwd" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
     <Property Name="sex" Type="Int32" Nullable="false" />
     <Property Name="age" Type="Int32" Nullable="false" />
