@@ -16,6 +16,7 @@ namespace Model
     {
         public int id { get; set; }
         public string name { get; set; }
+        public string pwd { get; set; }
         public int sex { get; set; }
         public int age { get; set; }
         public string @class { get; set; }

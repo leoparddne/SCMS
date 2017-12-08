@@ -21,7 +21,6 @@ E:\SCMS\SCMS\UnitTestProject1\bin\Debug\DAL.pdb
 E:\SCMS\SCMS\UnitTestProject1\bin\Debug\DAL.dll.config
 E:\SCMS\SCMS\UnitTestProject1\bin\Debug\EntityFramework.xml
 E:\SCMS\SCMS\UnitTestProject1\bin\Debug\zh-Hans\EntityFramework.resources.dll
-E:\SCMS\SCMS\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
 E:\SCMS\SCMS\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CoreCompileInputs.cache
 E:\SCMS\SCMS\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 E:\SCMS\SCMS\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
@@ -29,3 +28,4 @@ E:\SCMS\SCMS\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
 E:\SCMS\SCMS\UnitTestProject1\bin\Debug\Newtonsoft.Json.dll
 E:\SCMS\SCMS\UnitTestProject1\bin\Debug\Newtonsoft.Json.pdb
 E:\SCMS\SCMS\UnitTestProject1\bin\Debug\Newtonsoft.Json.xml
+E:\SCMS\SCMS\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache

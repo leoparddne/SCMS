@@ -46,6 +46,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDAL.cs" />
+    <Compile Include="clubAtivityDAL.cs" />
+    <Compile Include="clubManagerDAL.cs" />
+    <Compile Include="clubMemberDAL.cs" />
+    <Compile Include="commentDAL.cs" />
+    <Compile Include="newClubDAL.cs" />
+    <Compile Include="newMemberDAL.cs" />
+    <Compile Include="teacherDAL.cs" />
+    <Compile Include="userDAL.cs" />
     <Compile Include="ClubDAL.cs" />
     <Compile Include="EFContextFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

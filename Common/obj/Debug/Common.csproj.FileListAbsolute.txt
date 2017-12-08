@@ -4,3 +4,15 @@ E:\SCMS\SCMS\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 E:\SCMS\SCMS\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 E:\SCMS\SCMS\Common\obj\Debug\Common.dll
 E:\SCMS\SCMS\Common\obj\Debug\Common.pdb
+E:\SCMS\SCMS\Common\bin\Debug\BLL.dll
+E:\SCMS\SCMS\Common\bin\Debug\Model.dll
+E:\SCMS\SCMS\Common\bin\Debug\DAL.dll
+E:\SCMS\SCMS\Common\bin\Debug\EntityFramework.dll
+E:\SCMS\SCMS\Common\bin\Debug\BLL.pdb
+E:\SCMS\SCMS\Common\bin\Debug\Model.pdb
+E:\SCMS\SCMS\Common\bin\Debug\Model.dll.config
+E:\SCMS\SCMS\Common\bin\Debug\DAL.pdb
+E:\SCMS\SCMS\Common\bin\Debug\DAL.dll.config
+E:\SCMS\SCMS\Common\bin\Debug\EntityFramework.xml
+E:\SCMS\SCMS\Common\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\SCMS\SCMS\Common\bin\Debug\Common.dll.config

@@ -41,6 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseBLL.cs" />
+    <Compile Include="clubActivity.cs" />
+    <Compile Include="clubManager.cs" />
+    <Compile Include="clubMember.cs" />
+    <Compile Include="comment.cs" />
+    <Compile Include="newClub.cs" />
+    <Compile Include="newMember.cs" />
+    <Compile Include="teacher.cs" />
+    <Compile Include="user.cs" />
     <Compile Include="ClubBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
