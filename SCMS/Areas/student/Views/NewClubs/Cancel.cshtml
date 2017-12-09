@@ -1,0 +1,87 @@
+﻿@{
+    Layout = "~/Areas/student/Views/Shared/_main.cshtml";
+}
+
+
+<div class="content">
+    <div class="module">
+        <div class="module-head">
+            <h3>Forms</h3>
+        </div>
+        <div class="module-body">
+            @{
+        try 
+	{	        
+		if (Model.HasJoined)
+        {
+            <div class="alert alert-error">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>您已加入此社团!</strong> 是否申请错了社团?
+            </div>
+}
+        else if (Model.HasApply)
+        {
+                <div class="alert">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>您已提交申请!</strong> 请耐心等候!
+                </div>
+        }
+        else if(Model.HasRun)
+        {
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>申请提交成功!</strong> 请等待审核 :)
+                </div>
+        }
+	}
+	catch (Exception)
+	{
+		
+	}
+            }
+
+
+
+            <br>
+            <form class="form-horizontal row-fluid" action="/student/Clubs/Cancel/@ViewBag.clubID/1">
+                <div class="control-group">
+                    <label class="control-label" for="basicinput">社团编号</label>
+                    <div class="controls">
+                        <input id="basicinput" placeholder="@Model.Club.id" class="span8" disabled="" type="text">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="basicinput">社团名称</label>
+                    <div class="controls">
+                        <input id="basicinput" placeholder="@Model.Club.name" class="span8" disabled="" type="text">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="basicinput">社团logo</label>
+                    <div class="controls">
+                        <img src="@Model.Club.logo" class="span8" alt="社团logo"/>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="basicinput">社团状态</label>
+                    <div class="controls">
+                        <input id="basicinput" placeholder="@Model.Club.state" class="span8" disabled="" type="text">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="basicinput">社团创建日期</label>
+                    <div class="controls">
+                        <input id="basicinput" placeholder="@Model.Club.date.ToString()" class="span8" disabled="" type="text">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls ">
+                        <button type="submit" class="btn-inverse btn-large">提交申请</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div><!--/.content-->

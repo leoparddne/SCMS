@@ -4,7 +4,7 @@ E:\SCMS\SCMS\Model\bin\Debug\Model.pdb
 E:\SCMS\SCMS\Model\bin\Debug\EntityFramework.dll
 E:\SCMS\SCMS\Model\bin\Debug\EntityFramework.xml
 E:\SCMS\SCMS\Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\SCMS\SCMS\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 E:\SCMS\SCMS\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 E:\SCMS\SCMS\Model\obj\Debug\Model.dll
 E:\SCMS\SCMS\Model\obj\Debug\Model.pdb
-E:\SCMS\SCMS\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
-  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -79,9 +79,8 @@
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -134,73 +133,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\student\Views\Home\index.cshtml" />
-    <Content Include="Areas\manager\Views\Home\index.cshtml" />
     <Content Include="Areas\manager\Views\Login\Login.cshtml" />
+    <Content Include="Areas\student\Views\Clubs\Index.cshtml" />
+    <Content Include="Areas\student\Views\Clubs\Add.cshtml" />
     <None Include="Areas\student\Views\Login\Login.cshtml" />
-    <Content Include="Content\admin\css\admin.css" />
-    <Content Include="Content\admin\css\amazeui.css" />
-    <Content Include="Content\admin\css\amazeui.datatables.min.css" />
-    <Content Include="Content\admin\css\amazeui.flat.css" />
-    <Content Include="Content\admin\css\amazeui.flat.min.css" />
-    <Content Include="Content\admin\css\amazeui.min.css" />
-    <Content Include="Content\admin\css\amazeui.mineeeee.css" />
-    <Content Include="Content\admin\css\app.css" />
-    <Content Include="Content\admin\css\echartsHome.css" />
-    <Content Include="Content\admin\css\fullcalendar.min.css" />
-    <Content Include="Content\admin\css\fullcalendar.print.css" />
-    <Content Include="Content\admin\css\shop.css" />
-    <Content Include="Content\admin\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\admin\img\a5.png" />
-    <Content Include="Content\admin\img\k.jpg" />
-    <Content Include="Content\admin\img\logo.png" />
-    <Content Include="Content\admin\img\logoa.png" />
-    <Content Include="Content\admin\img\logob.png" />
-    <Content Include="Content\admin\img\user01.png" />
-    <Content Include="Content\admin\img\user02.png" />
-    <Content Include="Content\admin\img\user03.png" />
-    <Content Include="Content\admin\img\user04.png" />
-    <Content Include="Content\admin\img\user05.png" />
-    <Content Include="Content\admin\img\user06.png" />
-    <Content Include="Content\admin\img\user07.png" />
-    <Content Include="Content\admin\i\app-icon72x72%402x.png" />
-    <Content Include="Content\admin\i\examples\admin-chrome.png" />
-    <Content Include="Content\admin\i\examples\admin-firefox.png" />
-    <Content Include="Content\admin\i\examples\admin-ie.png" />
-    <Content Include="Content\admin\i\examples\admin-opera.png" />
-    <Content Include="Content\admin\i\examples\admin-safari.png" />
-    <Content Include="Content\admin\i\examples\adminPage.png" />
-    <Content Include="Content\admin\i\examples\blogPage.png" />
-    <Content Include="Content\admin\i\examples\landing.png" />
-    <Content Include="Content\admin\i\examples\landingPage.png" />
-    <Content Include="Content\admin\i\examples\loginPage.png" />
-    <Content Include="Content\admin\i\examples\sidebarPage.png" />
-    <Content Include="Content\admin\i\favicon.png" />
-    <Content Include="Content\admin\i\h_top.png" />
-    <Content Include="Content\admin\i\icoAdd.png" />
-    <Content Include="Content\admin\i\logo.png" />
-    <Content Include="Content\admin\i\l_07.png" />
-    <Content Include="Content\admin\i\startup-640x1096.png" />
-    <Content Include="Content\admin\js\amazeui.datatables.min.js" />
-    <Content Include="Content\admin\js\amazeui.js" />
-    <Content Include="Content\admin\js\amazeui.legacy.js" />
-    <Content Include="Content\admin\js\amazeui.legacy.min.js" />
-    <Content Include="Content\admin\js\amazeui.min.js" />
-    <Content Include="Content\admin\js\amazeui.widgets.helper.js" />
-    <Content Include="Content\admin\js\amazeui.widgets.helper.min.js" />
-    <Content Include="Content\admin\js\app.js" />
-    <Content Include="Content\admin\js\codemirror.js" />
-    <Content Include="Content\admin\js\dataTables.responsive.min.js" />
-    <Content Include="Content\admin\js\echarts.min.js" />
-    <Content Include="Content\admin\js\echartsExample.js" />
-    <Content Include="Content\admin\js\fullcalendar.min.js" />
-    <Content Include="Content\admin\js\handlebars.min.js" />
-    <Content Include="Content\admin\js\jquery.jerichotab.min.js" />
-    <Content Include="Content\admin\js\jquery.min.js" />
-    <Content Include="Content\admin\js\moment.js" />
-    <Content Include="Content\admin\js\polyfill\rem.min.js" />
-    <Content Include="Content\admin\js\polyfill\respond.min.js" />
-    <Content Include="Content\admin\js\theme.js" />
+    <None Include="Areas\student\Views\Home\Index.cshtml" />
+    <Content Include="Content\admin\activity.html" />
+    <Content Include="Content\admin\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Content\admin\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\admin\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\admin\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Content\admin\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\admin\charts.html" />
+    <Content Include="Content\admin\css\theme.css" />
+    <Content Include="Content\admin\form.html" />
+    <Content Include="Content\admin\images\bg.png" />
+    <Content Include="Content\admin\images\icons\css\font-awesome.css" />
+    <Content Include="Content\admin\images\img.jpg" />
+    <Content Include="Content\admin\images\jquery-ui\picker.png" />
+    <Content Include="Content\admin\images\user.png" />
+    <Content Include="Content\admin\index.html" />
+    <Content Include="Content\admin\message.html" />
+    <Content Include="Content\admin\other-login.html" />
+    <Content Include="Content\admin\other-user-listing.html" />
+    <Content Include="Content\admin\other-user-profile.html" />
+    <Content Include="Content\admin\scripts\common.js" />
+    <Content Include="Content\admin\scripts\datatables\jquery.dataTables.js" />
+    <Content Include="Content\admin\scripts\flot\jquery.flot.js" />
+    <Content Include="Content\admin\scripts\flot\jquery.flot.pie.js" />
+    <Content Include="Content\admin\scripts\flot\jquery.flot.resize.js" />
+    <Content Include="Content\admin\scripts\jquery-1.9.1.min.js" />
+    <Content Include="Content\admin\scripts\jquery-ui-1.10.1.custom.min.js" />
+    <Content Include="Content\admin\table.html" />
+    <Content Include="Content\admin\task.html" />
+    <Content Include="Content\admin\ui-button-icon.html" />
+    <Content Include="Content\admin\ui-typography.html" />
     <Content Include="Content\css\animate.min.css" />
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.css" />
@@ -300,16 +267,18 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="Content\admin\css\app.less" />
-    <Content Include="Content\admin\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\admin\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\admin\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\admin\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\admin\fonts\FontAwesome.otf" />
     <Content Include="Areas\student\Views\web.config" />
     <Content Include="Content\js\jquery-2.1.0.min.map" />
-    <Content Include="Areas\teacher\Views\Home\index.cshtml" />
     <Content Include="Areas\teacher\Views\Login\Login.cshtml" />
+    <Content Include="Content\admin\images\icons\font\fontawesome-webfont3294.eot" />
+    <Content Include="Content\admin\images\icons\font\fontawesome-webfont3294.ttf" />
+    <Content Include="Content\admin\images\icons\font\fontawesome-webfont3294.woff" />
+    <Content Include="Content\admin\images\icons\font\fontawesome-webfontd41d.eot" />
+    <Content Include="Areas\student\Views\Shared\_main.cshtml" />
+    <Content Include="Areas\student\Views\Mine\Index.cshtml" />
+    <Content Include="Areas\student\Views\NewClubs\Index.cshtml" />
+    <Content Include="Areas\student\Views\Mine\Quit.cshtml" />
+    <Content Include="Areas\student\Views\NewClubs\Cancel.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -319,14 +288,26 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\isAuthorizeAttribute.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\manager\Controllers\HomeController.cs" />
     <Compile Include="Areas\manager\Controllers\LoginController.cs" />
     <Compile Include="Areas\manager\managerAreaRegistration.cs" />
+    <Compile Include="Areas\student\Controllers\ActivityController.cs" />
+    <Compile Include="Areas\student\Controllers\BaseController.cs" />
+    <Compile Include="Areas\student\Controllers\ClubsController.cs" />
     <Compile Include="Areas\student\Controllers\HomeController.cs" />
     <Compile Include="Areas\student\Controllers\LoginController.cs" />
+    <Compile Include="Areas\student\Controllers\MessagesController.cs" />
+    <Compile Include="Areas\student\Controllers\MineController.cs" />
+    <Compile Include="Areas\student\Controllers\NewClubsController.cs" />
+    <Compile Include="Areas\student\Controllers\PersonalCenterController.cs" />
+    <Compile Include="Areas\student\Models\AddClub.cs" />
+    <Compile Include="Areas\student\Models\DushBoard.cs" />
+    <Compile Include="Areas\student\Models\QuitClub.cs" />
     <Compile Include="Areas\student\studentAreaRegistration.cs" />
     <Compile Include="Areas\teacher\Controllers\HomeController.cs" />
     <Compile Include="Areas\teacher\Controllers\LoginController.cs" />
@@ -365,10 +346,13 @@
     <Folder Include="Areas\admin\Models\" />
     <Folder Include="Areas\admin\Views\Shared\" />
     <Folder Include="Areas\manager\Models\" />
+    <Folder Include="Areas\manager\Views\Home\" />
     <Folder Include="Areas\manager\Views\Shared\" />
-    <Folder Include="Areas\student\Models\" />
-    <Folder Include="Areas\student\Views\Shared\" />
+    <Folder Include="Areas\student\Views\Activity\" />
+    <Folder Include="Areas\student\Views\Messages\" />
+    <Folder Include="Areas\student\Views\PersonalCenter\" />
     <Folder Include="Areas\teacher\Models\" />
+    <Folder Include="Areas\teacher\Views\Home\" />
     <Folder Include="Areas\teacher\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
@@ -418,8 +402,8 @@
     <PropertyGroup>
       <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

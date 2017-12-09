@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace SCMS.Areas.manager.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: manager/Login
@@ -30,7 +31,10 @@ namespace SCMS.Areas.manager.Controllers
 
                     var exist = clubBll.Exist(p => p.userID == model.id);
                     if (exist)
+                    {
+                        Session["Username"] = username;
                         return Redirect("/manager/Home");
+                    }
                     else
                         return Redirect("/manager/Login/Login?errorMSG=2");
                 }

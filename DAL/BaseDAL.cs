@@ -29,7 +29,22 @@ namespace DAL
         {
             return DataContext.Set<T>().Where(condition).FirstOrDefault();
         }
-
+        public List<T> GetModelList()
+        {
+            return GetList();
+        }
+        public IQueryable<T> GetModels(Expression<Func<T, bool>> condition)
+        {
+            return DataContext.Set<T>().Where(condition);
+        }
+        public List<T> GetList()
+        {
+            return (List<T>)DataContext.Set<T>().ToList();
+        }
+        public List<T> GetList(Expression<Func<T, bool>> condition)
+        {
+            return (List<T>)DataContext.Set<T>().Where(condition).ToList();
+        }
         public virtual T GetModelById(params object[] keyValues)
         {
             return DataContext.Set<T>().Find(keyValues);
@@ -97,5 +112,14 @@ namespace DAL
             return DataContext.SaveChanges();
         }
         #endregion
+
+        public int GetRecordCount()
+        {
+            return DataContext.Set<T>().Count();
+        }
+        public int GetRecordCount(Expression<Func<T, bool>> condition)
+        {
+            return DataContext.Set<T>().Count(condition);
+        }
     }
 }

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace SCMS.Areas.teacher.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: teacher/Login
@@ -30,7 +31,10 @@ namespace SCMS.Areas.teacher.Controllers
 
                     var exist = teacherBll.Exist(p => p.userID == model.id);
                     if (exist)
+                    {
+                        Session["Username"] = username;
                         return Redirect("/teacher/Home");
+                    }
                     else
                         return Redirect("/teacher/Login/Login?errorMSG=2");
                 }

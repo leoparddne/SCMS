@@ -30,5 +30,7 @@ namespace Common
         {
             return System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(code, "MD5").ToLower();
         }
+
+
     }
 }

@@ -9,14 +9,15 @@ using System.Web.Mvc;
 
 namespace SCMS.Areas.student.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: student/login
-        public ActionResult login()
+        public ActionResult Login()
         {
             return View();
         }
-        public ActionResult checkPwd()
+        public ActionResult CheckPwd()
         {
             string pwd = Request.Params["pwd"];
             string username = Request.Params["username"];
@@ -26,7 +27,10 @@ namespace SCMS.Areas.student.Controllers
                 var result = Common.Auth.CheckPwd(pwd, username);
 
                 if (result)
+                {
+                    Session["Username"] = username;
                     return Redirect("/student/Home");
+                }
                 else
                     return Redirect("/student/Login/Login?errorMSG=1");
             }
@@ -34,6 +38,12 @@ namespace SCMS.Areas.student.Controllers
             {
                 return Redirect("/student/Login/Login?errorMSG=1");
             }
+        }
+
+        public ActionResult Logout()
+        {
+            ViewBag.Username = null;
+            return Redirect("/");
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using DAL;
 namespace BLL
@@ -33,6 +35,30 @@ namespace BLL
         {
             return CurrentRepository.GetModel(condition);
         }
+        public List<T> GetModelList()
+        {
+            return CurrentRepository.GetModelList();
+        }
+        public IQueryable<T> GetModels(Expression<Func<T, bool>> condition)
+        {
+            return CurrentRepository.GetModels(condition);
+        }
+        /// <summary>
+        /// 获取所有数据
+        /// </summary>
+        /// <returns></returns>
+        public List<T> GetList()
+        {
+            return CurrentRepository.GetList();
+        }
+        /// <summary>
+        /// 获取条件获取相应的数据
+        /// </summary>
+        /// <returns></returns>
+        public List<T> GetList(Expression<Func<T, bool>> condition)
+        {
+            return CurrentRepository.GetList(condition);
+        }
         public T GetModelById(params object[] keyValues)
         {
             return CurrentRepository.GetModelById(keyValues);
@@ -55,6 +81,15 @@ namespace BLL
         public void Delete(T model, bool isAddedEFContext)
         {
             CurrentRepository.Delete(model, isAddedEFContext);
+        }
+
+        public int GetRecordCount()
+        {
+            return CurrentRepository.GetRecordCount();
+        }
+        public int GetRecordCount(Expression<Func<T, bool>> condition)
+        {
+            return CurrentRepository.GetRecordCount(condition);
         }
     }
 }
