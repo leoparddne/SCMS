@@ -48,6 +48,7 @@
     <Compile Include="newClub.cs" />
     <Compile Include="newMember.cs" />
     <Compile Include="teacher.cs" />
+    <Compile Include="messageBLL.cs" />
     <Compile Include="user.cs" />
     <Compile Include="ClubBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

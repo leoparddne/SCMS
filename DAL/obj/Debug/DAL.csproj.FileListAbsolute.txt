@@ -11,3 +11,16 @@ E:\SCMS\SCMS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 E:\SCMS\SCMS\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 E:\SCMS\SCMS\DAL\obj\Debug\DAL.dll
 E:\SCMS\SCMS\DAL\obj\Debug\DAL.pdb
+E:\s\DAL\bin\Debug\DAL.dll.config
+E:\s\DAL\bin\Debug\DAL.dll
+E:\s\DAL\bin\Debug\DAL.pdb
+E:\s\DAL\bin\Debug\EntityFramework.dll
+E:\s\DAL\bin\Debug\Model.dll
+E:\s\DAL\bin\Debug\Model.pdb
+E:\s\DAL\bin\Debug\Model.dll.config
+E:\s\DAL\bin\Debug\EntityFramework.xml
+E:\s\DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\s\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\s\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\s\DAL\obj\Debug\DAL.dll
+E:\s\DAL\obj\Debug\DAL.pdb

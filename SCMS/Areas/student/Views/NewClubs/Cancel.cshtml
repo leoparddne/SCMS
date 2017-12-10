@@ -10,40 +10,38 @@
         </div>
         <div class="module-body">
             @{
-        try 
-	{	        
-		if (Model.HasJoined)
-        {
-            <div class="alert alert-error">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>您已加入此社团!</strong> 是否申请错了社团?
-            </div>
-}
-        else if (Model.HasApply)
-        {
-                <div class="alert">
-                    <button type="button" class="close" data-dismiss="alert">×</button>
-                    <strong>您已提交申请!</strong> 请耐心等候!
-                </div>
-        }
-        else if(Model.HasRun)
-        {
-                <div class="alert alert-success">
-                    <button type="button" class="close" data-dismiss="alert">×</button>
-                    <strong>申请提交成功!</strong> 请等待审核 :)
-                </div>
-        }
-	}
-	catch (Exception)
-	{
-		
-	}
+                try
+                {
+                    if (Model.HasRun)
+                    {
+                        if (!Model.Result)
+                        {
+                            <div class="alert alert-error">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                <strong>取消申请失败!</strong> 是否提交了申请?
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-success">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                <strong>取消申请!</strong>  :)
+                            </div>
+
+                        }
+                    }
+                }
+
+                catch (Exception)
+                {
+                    this.Response.Redirect("/student/Home");
+                }
             }
 
 
 
             <br>
-            <form class="form-horizontal row-fluid" action="/student/Clubs/Cancel/@ViewBag.clubID/1">
+            <form class="form-horizontal row-fluid" action="/student/NewClubs/Cancel/@ViewBag.clubID/1">
                 <div class="control-group">
                     <label class="control-label" for="basicinput">社团编号</label>
                     <div class="controls">
@@ -59,7 +57,7 @@
                 <div class="control-group">
                     <label class="control-label" for="basicinput">社团logo</label>
                     <div class="controls">
-                        <img src="@Model.Club.logo" class="span8" alt="社团logo"/>
+                        <img src="@Model.Club.logo" class="span8" alt="社团logo" />
                     </div>
                 </div>
                 <div class="control-group">

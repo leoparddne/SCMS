@@ -47,6 +47,15 @@
     <Property Name="text" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="time" Type="datetime" Precision="0" Nullable="false" />
   </EntityType>
+  <EntityType Name="message">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="from" Type="int" Nullable="false" />
+    <Property Name="context" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="state" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="newclub">
     <Key>
       <PropertyRef Name="id" />
@@ -94,6 +103,7 @@
     <EntitySet Name="clubmanager" EntityType="Self.clubmanager" Schema="scms" store:Type="Tables" />
     <EntitySet Name="clubmember" EntityType="Self.clubmember" Schema="scms" store:Type="Tables" />
     <EntitySet Name="comment" EntityType="Self.comment" Schema="scms" store:Type="Tables" />
+    <EntitySet Name="message" EntityType="Self.message" Schema="scms" store:Type="Tables" />
     <EntitySet Name="newclub" EntityType="Self.newclub" Schema="scms" store:Type="Tables" />
     <EntitySet Name="newmember" EntityType="Self.newmember" Schema="scms" store:Type="Tables" />
     <EntitySet Name="teacher" EntityType="Self.teacher" Schema="scms" store:Type="Tables" />

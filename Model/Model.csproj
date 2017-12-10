@@ -62,6 +62,9 @@
     <Compile Include="comment.cs">
       <DependentUpon>scmsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="message.cs">
+      <DependentUpon>scmsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="newclub.cs">
       <DependentUpon>scmsModel.tt</DependentUpon>
     </Compile>

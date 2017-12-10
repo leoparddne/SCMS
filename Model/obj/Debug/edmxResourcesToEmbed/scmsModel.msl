@@ -98,5 +98,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="message">
+      <EntityTypeMapping TypeName="scmsModel.message">
+        <MappingFragment StoreEntitySet="message">
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="context" ColumnName="context" />
+          <ScalarProperty Name="from" ColumnName="from" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

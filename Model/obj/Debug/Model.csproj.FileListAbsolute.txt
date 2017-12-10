@@ -8,3 +8,13 @@ E:\SCMS\SCMS\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 E:\SCMS\SCMS\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 E:\SCMS\SCMS\Model\obj\Debug\Model.dll
 E:\SCMS\SCMS\Model\obj\Debug\Model.pdb
+E:\s\Model\bin\Debug\Model.dll.config
+E:\s\Model\bin\Debug\Model.dll
+E:\s\Model\bin\Debug\Model.pdb
+E:\s\Model\bin\Debug\EntityFramework.dll
+E:\s\Model\bin\Debug\EntityFramework.xml
+E:\s\Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\s\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\s\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+E:\s\Model\obj\Debug\Model.dll
+E:\s\Model\obj\Debug\Model.pdb

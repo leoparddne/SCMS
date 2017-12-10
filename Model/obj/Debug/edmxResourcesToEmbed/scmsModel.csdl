@@ -86,6 +86,7 @@
     <EntitySet Name="newmember" EntityType="Self.newmember" />
     <EntitySet Name="teacher" EntityType="Self.teacher" />
     <EntitySet Name="user" EntityType="scmsModel.user" />
+    <EntitySet Name="message" EntityType="scmsModel.message" />
   </EntityContainer>
   <EntityType Name="user">
     <Key>
@@ -98,5 +99,14 @@
     <Property Name="age" Type="Int32" Nullable="false" />
     <Property Name="class" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="department" Type="Int32" />
+  </EntityType>
+  <EntityType Name="message">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="from" Type="Int32" Nullable="false" />
+    <Property Name="context" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
   </EntityType>
 </Schema>

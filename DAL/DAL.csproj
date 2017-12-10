@@ -53,6 +53,7 @@
     <Compile Include="newClubDAL.cs" />
     <Compile Include="newMemberDAL.cs" />
     <Compile Include="teacherDAL.cs" />
+    <Compile Include="messageDAL.cs" />
     <Compile Include="userDAL.cs" />
     <Compile Include="ClubDAL.cs" />
     <Compile Include="EFContextFactory.cs" />

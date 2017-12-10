@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-12-10 03:32:01
+Date: 2017-12-10 16:16:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -102,7 +102,6 @@ CREATE TABLE `clubmember` (
 -- ----------------------------
 -- Records of clubmember
 -- ----------------------------
-INSERT INTO `clubmember` VALUES ('8', '1', '3', '2017-12-10 03:18:51');
 
 -- ----------------------------
 -- Table structure for comment
@@ -118,6 +117,22 @@ CREATE TABLE `comment` (
 
 -- ----------------------------
 -- Records of comment
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for message
+-- ----------------------------
+DROP TABLE IF EXISTS `message`;
+CREATE TABLE `message` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `from` int(11) NOT NULL,
+  `context` varchar(255) NOT NULL,
+  `state` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of message
 -- ----------------------------
 
 -- ----------------------------
@@ -155,10 +170,6 @@ CREATE TABLE `newmember` (
 -- ----------------------------
 -- Records of newmember
 -- ----------------------------
-INSERT INTO `newmember` VALUES ('6', '1', '2', '2017-12-10 01:30:16', null, null, '0');
-INSERT INTO `newmember` VALUES ('7', '1', '3', '2017-12-10 01:30:25', null, null, '0');
-INSERT INTO `newmember` VALUES ('8', '1', '5', '2017-12-10 02:16:39', null, null, '0');
-INSERT INTO `newmember` VALUES ('9', '1', '21', '2017-12-10 02:20:24', null, null, '0');
 
 -- ----------------------------
 -- Table structure for teacher

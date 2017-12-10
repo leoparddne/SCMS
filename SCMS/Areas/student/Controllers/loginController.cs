@@ -42,7 +42,9 @@ namespace SCMS.Areas.student.Controllers
 
         public ActionResult Logout()
         {
-            ViewBag.Username = null;
+            ViewBag.messagename = null;
+            this.Session.Abandon();
+            this.Response.Cookies.Add(new HttpCookie("asp.net_session", string.Empty) { HttpOnly = true });
             return Redirect("/");
         }
     }
