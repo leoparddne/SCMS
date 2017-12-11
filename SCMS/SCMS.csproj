@@ -138,6 +138,7 @@
     <Content Include="Areas\student\Views\Clubs\Add.cshtml" />
     <Content Include="Areas\student\Views\Activity\Info.cshtml" />
     <Content Include="Areas\student\Views\Activity\Mine.cshtml" />
+    <Content Include="Areas\student\Views\Clubs\Info.cshtml" />
     <None Include="Areas\student\Views\Login\Login.cshtml" />
     <None Include="Areas\student\Views\Home\Index.cshtml" />
     <Content Include="Content\admin\activity.html" />
@@ -283,6 +284,7 @@
     <Content Include="Areas\student\Views\NewClubs\Index.cshtml" />
     <Content Include="Areas\student\Views\Messages\Index.cshtml" />
     <Content Include="Areas\student\Views\PersonalCenter\Index.cshtml" />
+    <Content Include="Areas\student\Views\NewClubs\Result.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -313,6 +315,7 @@
     <Compile Include="Areas\student\Models\ActivityMoreInfo.cs" />
     <Compile Include="Areas\student\Models\AddClub.cs" />
     <Compile Include="Areas\student\Models\CancelClub.cs" />
+    <Compile Include="Areas\student\Models\ChangePWD.cs" />
     <Compile Include="Areas\student\Models\DushBoard.cs" />
     <Compile Include="Areas\student\Models\QuitClub.cs" />
     <Compile Include="Areas\student\studentAreaRegistration.cs" />

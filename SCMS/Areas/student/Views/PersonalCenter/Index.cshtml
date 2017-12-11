@@ -6,80 +6,82 @@
 <div class="content">
     <div class="module">
         <div class="module-head">
-            <h3>Forms</h3>
+            <h3>修改密码</h3>
         </div>
         <div class="module-body">
             @{
-                try
-                {
-                    if (Model.HasRun)
-                    {
-                        if (!Model.Result)
-                        {
-                            <div class="alert alert-error">
-                                <button type="button" class="close" data-dismiss="alert">×</button>
-                                <strong>退出错误!</strong> 是否加入了社团?
-                            </div>
-                        }
-                        else
-                        {
-                            <div class="alert alert-success">
-                            <button type="button" class="close" data-dismiss="alert">×</button>
-                            <strong>退出成功!</strong>  :)
-                        </div>
-                            
-                        }
-                    }
-                 }
-
-            catch (Exception)
+        try
+        {
+            if (!Model.Success)
             {
-                    this.Response.Redirect("/student/Home");
-            }
-            }
+                <div class="alert alert-error">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>修改错误!</strong> 旧密码是否正确?
+                </div>
 
 
+
+    }
+    else
+    {
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>修改成功!</strong>  :)
+        </div>
+}
+}
+
+catch (Exception)
+{
+//this.Response.Redirect("/student/Home");
+}
+            }
 
             <br>
-            <form class="form-horizontal row-fluid" action="/student/Mine/Quit/@ViewBag.clubID/1">
+            <form class="form-horizontal row-fluid" action="/student/PersonalCenter/" onsubmit="return check()">
                 <div class="control-group">
-                    <label class="control-label" for="basicinput">社团编号</label>
+                    <label class="control-label" for="basicinput">旧密码</label>
                     <div class="controls">
-                        <input id="basicinput" placeholder="@Model.Club.id" class="span8" disabled="" type="text">
+                        <input id="oldPWD" name="oldPWD" placeholder="请输入..." class="span8" type="password">
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="basicinput">社团名称</label>
+                    <label class="control-label" for="basicinput">新密码</label>
                     <div class="controls">
-                        <input id="basicinput" placeholder="@Model.Club.name" class="span8" disabled="" type="text">
+                        <input id="newPWD" name="newPWD" placeholder="请输入..." class="span8" type="password">
+                        <span class="help-inline" id="errMSG" style="color:red;display:none">两次密码不匹配</span>
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="basicinput">社团logo</label>
+                    <label class="control-label" for="basicinput">确认新密码</label>
                     <div class="controls">
-                        <img src="@Model.Club.logo" class="span8" alt="社团logo" />
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label" for="basicinput">社团状态</label>
-                    <div class="controls">
-                        <input id="basicinput" placeholder="@Model.Club.state" class="span8" disabled="" type="text">
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label" for="basicinput">社团创建日期</label>
-                    <div class="controls">
-                        <input id="basicinput" placeholder="@Model.Club.date.ToString()" class="span8" disabled="" type="text">
+                        <input id="confirmPWD" placeholder="请输入..." class="span8" type="password">
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="controls ">
-                        <button type="submit" class="btn-inverse btn-large">退出社团</button>
+                        <button type="submit" class="btn-inverse btn-large">更新</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+    <script type="text/javascript">
+        function check() {
+            var newPwd = document.getElementById("newPWD");
+            var confirmNewPwd = document.getElementById("confirmPWD");
+            var err = document.getElementById("errMSG");
+            if (newPwd.value == confirmNewPwd.value) {
+                err.style.display = "none";
+                return true;
+            }
+            else {
+                
+                err.style.display = "";
+                return false;
+            }
 
+        }
+    </script>
 
     </div><!--/.content-->

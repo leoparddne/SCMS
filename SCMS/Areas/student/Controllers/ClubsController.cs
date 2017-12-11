@@ -67,5 +67,11 @@ namespace SCMS.Areas.student.Controllers
             }
             return viewModel;
         }
+        public ActionResult Info(int id)
+        {
+            var model = new BLL.ClubBLL().GetModel(p=>p.id==id);;
+            return View(model);
+
+        }
     }
 }

@@ -4,7 +4,7 @@
 <div class="module">
     <div class="module-head">
         <h3>
-            社团
+            社团列表
         </h3>
     </div>
     <div class="module-body table">
@@ -35,7 +35,9 @@
             </thead>
             <tbody>
                 @{
-                    foreach (Model.club i in Model)
+                   try 
+	{	        
+		 foreach (Model.club i in Model)
                     {
                         int temp = 0;
                         string style = "odd";
@@ -74,6 +76,19 @@
                                 </tr>
                             }
                     }
+	}
+	catch (Exception)
+	{
+		
+                                <tr>
+                                    <td>暂无数据</td>
+                                    <td>暂无数据</td>
+                                    <td>暂无数据</td>
+                                    <td>暂无数据</td>
+                                    <td>暂无数据</td>
+                                    <td>暂无数据</td>
+                                </tr>
+	}
                 }
             </tbody>
 

@@ -15,17 +15,9 @@ namespace SCMS.Areas.student.Controllers
         {
             //获取用户的id
             //获取我加入的社团数据
-            try
-            {
                 int userID = Common.User.GetUserID(Session["Username"].ToString());
-                var list = new BLL.newMember().GetModels(p => p.userID == userID);
+                var list = new BLL.newMember().GetModels(p => p.userID == userID&p.state==0);
                 return View(list);
-            }
-            catch (Exception)
-            {
-
-                return View();
-            }
         }
         public ActionResult Cancel(int id, int run = 0)
         {
@@ -43,6 +35,7 @@ namespace SCMS.Areas.student.Controllers
             {
                 model.Result = ExectudeQuit(newMember.clubID);
                 model.HasRun = true;
+
                 return View(model);
             }
 
@@ -62,10 +55,32 @@ namespace SCMS.Areas.student.Controllers
                 //删除记录
                 var model = bll.GetModel(p => (p.userID == userID & p.clubID == clubID & p.state == 0));
                 bll.Delete(model, false);
+                ViewBag.NewClubs = bll.GetRecordCount(p => (p.userID == userID  & p.state == 0)); ;
                 return true;
             }
             else
                 return false;
+        }
+        public ActionResult Result()
+        {
+            int userID = Common.User.GetUserID(Session["Username"].ToString());
+            var list = new BLL.newMember().GetModels(p => p.userID == userID &p.state!=0 &p.state!=3);
+            //刷新视图数据
+            //获取我申请的社团数
+            var mine = new BLL.newMember().GetRecordCount(p => p.userID == userID & p.state == 0);
+            ViewBag.Mine = mine;
+            return View(list);
+        }
+        public ActionResult Read(int id)
+        {
+            var bll = new BLL.newMember();
+            var model = bll.GetModel(p => p.id == id);
+            model.state = 3;
+            bll.Update(model, new[] { "id","state"});
+            int userID = Common.User.GetUserID(Session["Username"].ToString());
+            ViewBag.ApplyResult = bll.GetRecordCount(p => p.userID == userID & p.state != 0 & p.state != 3);
+            var list = new BLL.newMember().GetModels(p => p.userID == userID & p.state != 0 & p.state != 3);
+            return View("Result", list);
         }
     }
 }

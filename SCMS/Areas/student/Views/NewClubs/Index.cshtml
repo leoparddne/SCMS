@@ -5,7 +5,7 @@
 <div class="module">
     <div class="module-head">
         <h3>
-            社团
+            申请列表
         </h3>
     </div>
     <div class="module-body table">
@@ -13,7 +13,6 @@
                width="100%">
             <thead>
                 <tr>
-
                     <th>
                         申请编号
                     </th>
@@ -30,6 +29,9 @@
                         申请状态
                     </th>
                     <th>
+                        社团详情
+                    </th>
+                    <th>
                         取消申请
                     </th>
                 </tr>
@@ -44,14 +46,15 @@
                             int temp = 1;
                             if (temp % 2 == 0)
                             {
-                                <tr class="gradeX">
-                                    <td>@i.id</td>
-                                    <td>@i.clubID</td>
-                                    <td>@Common.Club.getClubName(@i.clubID);</td>
-                                    <td>@i.time</td>
-                                    <td>@i.state</td>
-                                    <td><a href="/student/NewClubs/Cancel/@i.id">取消</a></td>
-                                </tr>
+                <tr class="gradeX">
+                    <td>@i.id</td>
+                    <td>@i.clubID</td>
+                    <td>@Common.Club.getClubName(@i.clubID);</td>
+                    <td>@i.time</td>
+                    <td>@i.state</td>
+                    <td><a href="/student/Clubs/Info/@i.id">详情</a></td>
+                    <td><a href="/student/NewClubs/Cancel/@i.id">取消</a></td>
+                </tr>
                             }
                             else
                             {
@@ -61,6 +64,7 @@
                                     <td>@Common.Club.getClubName(@i.clubID);</td>
                                     <td>@i.time</td>
                                     <td>@i.state</td>
+                                    <td><a href="/student/Clubs/Info/@i.id">详情</a></td>
                                     <td><a href="/student/NewClubs/Cancel/@i.id">取消</a></td>
                                 </tr>
                             }
@@ -69,6 +73,7 @@
                     catch (Exception)
                     {
                                 <tr>
+                                    <td>暂无数据</td>
                                     <td>暂无数据</td>
                                     <td>暂无数据</td>
                                     <td>暂无数据</td>

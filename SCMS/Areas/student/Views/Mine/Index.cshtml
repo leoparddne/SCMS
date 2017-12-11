@@ -5,7 +5,7 @@
 <div class="module">
     <div class="module-head">
         <h3>
-            社团
+            我的社团
         </h3>
     </div>
     <div class="module-body table">
@@ -13,7 +13,6 @@
                width="100%">
             <thead>
                 <tr>
-
                     <th>
                         社团编号
                     </th>
@@ -22,6 +21,9 @@
                     </th>
                     <th>
                         加入时间
+                    </th>
+                    <th>
+                        社团详情
                     </th>
                     <th>
                         退出社团
@@ -42,7 +44,8 @@
                                     <td>@i.clubid</td>
                                     <td>@Common.Club.getClubName(@i.clubid);</td>
                                     <td>@i.date</td>
-                                    <td><a href="/student/Mine/quit?id=@i.id">退出</a></td>
+                                    <td><a href="/student/Clubs/Info/@i.clubid">详情</a></td>
+                                    <td><a href="/student/Mine/quit/@i.id">退出</a></td>
                                 </tr>
                             }
                             else
@@ -51,6 +54,7 @@
                                     <td>@i.clubid</td>
                                     <td>@Common.Club.getClubName(@i.clubid);</td>
                                     <td>@i.date</td>
+                                    <td><a href="/student/Clubs/Info/@i.clubid">详情</a></td>
                                     <td><a href="/student/Mine/quit/@i.id">退出</a></td>
                                 </tr>
                             }
@@ -58,18 +62,17 @@
                     }
                     catch (Exception)
                     {
-
-                    <td>暂无数据</td>
-                    <td>暂无数据</td>
-                    <td>暂无数据</td>
-                    <td>暂无数据</td>
-                    <td>暂无数据</td>
-                    <td>暂无数据</td>
-
+                        <tr>
+                            <td>暂无数据</td>
+                            <td>暂无数据</td>
+                            <td>暂无数据</td>
+                            <td>暂无数据</td>
+                            <td>暂无数据</td>
+                        </tr>
+                    }
                 }
-                }
-                </tbody>
+            </tbody>
 
-            </table>
-        </div>
+        </table>
     </div>
+</div>

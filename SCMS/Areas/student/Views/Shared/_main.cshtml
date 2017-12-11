@@ -45,7 +45,7 @@
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">修改信息</a></li>
+                                <li><a href="/student/PersonalCenter/">修改密码</a></li>
                                 <li class="divider"></li>
                                 <li><a href="/student/Login/logout">退出</a></li>
                             </ul>
@@ -70,28 +70,35 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="/student/Clubs/"><i class="menu-icon icon-bullhorn"></i>社团 </a>
+                                <a href="/student/Clubs/"><i class="menu-icon icon-paste"></i>社团 </a>
+                            </li>
+                            <li>
+                                <a href="/student/NewClubs/Result">
+                                    <i class="menu-icon icon-bar-chart"></i>申请结果 <b class="label orange pull-right">
+                                        @ViewBag.ApplyResult
+                                    </b>
+                                </a>
                             </li>
                             <li>
                                 <a href="/student/Messages/">
-                                    <i class="menu-icon icon-inbox"></i>通知 <b class="label green pull-right">
+                                    <i class="menu-icon icon-bullhorn"></i>通知 <b class="label green pull-right">
                                         @ViewBag.Message
                                     </b>
                                 </a>
                             </li>
-                            
+
                         </ul>
                         <ul class="widget widget-menu unstyled">
                             <li>
                                 <a href="/student/Activity/Mine">
-                                    <i class="menu-icon icon-tasks"></i>我的活动 <b class="label orange pull-right">
+                                    <i class="menu-icon icon-table"></i>我的活动 <b class="label orange pull-right">
                                          @ViewBag.MineActivity
                                     </b>
                                 </a>
                             </li>
                             <li>
                                 <a href="/student/Activity/">
-                                    <i class="menu-icon icon-inbox"></i>活动 <b class="label green pull-right">
+                                    <i class="menu-icon icon-table"></i>活动 <b class="label green pull-right">
                                         @ViewBag.Activity
                                     </b>
                                 </a>

@@ -27,7 +27,7 @@ namespace SCMS.Areas.student.Controllers
             //获取我加入的社团数
             model.Mine = new BLL.clubMember().GetRecordCount(p => p.userid == userModel.id);
             //获取申请中的新社团
-            model.NewClubs = new BLL.newMember().GetRecordCount(p => p.userID == userModel.id);
+            model.NewClubs = new BLL.newMember().GetRecordCount(p => p.userID == userModel.id & p.state==0);
 
             ViewBag.Clubs = model.Clubs;
             ViewBag.Mine = model.Mine;
@@ -44,6 +44,8 @@ namespace SCMS.Areas.student.Controllers
                 count += new BLL.clubActivity().GetRecordCount(p => p.clubID == item.clubid);
             }
             ViewBag.mineActivity = count;
+            //获取未读申请结果个数
+            ViewBag.ApplyResult = new BLL.newMember().GetRecordCount(p => p.userID == userModel.id & p.state != 0 & p.state != 3);
         }
     }
     //自定义的异常处理

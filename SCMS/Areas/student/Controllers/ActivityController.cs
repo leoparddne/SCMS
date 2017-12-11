@@ -13,9 +13,6 @@ namespace SCMS.Areas.student.Controllers
         // GET: student/Activity
         public ActionResult Index()
         {
-            try
-            {
-
                 List<Activity> list = new List<Activity>();
                 var activities = new BLL.clubActivity().GetList();
                 //将需要的社团活动信息填充入list
@@ -35,19 +32,11 @@ namespace SCMS.Areas.student.Controllers
                 }
 
                 return View("Mine", list);
-            }
-            catch (Exception)
-            {
-
-                return View();
-            }
         }
         public ActionResult Mine()
         {
 
             //获取用户的id
-            try
-            {
                 int userID = Common.User.GetUserID(Session["Username"].ToString());
                 //获取我加入的社团数据
                 var mineClub = new BLL.clubMember().GetModels(p => p.userid == userID);
@@ -75,18 +64,10 @@ namespace SCMS.Areas.student.Controllers
 
                 }
                 return View(list);
-            }
-            catch (Exception)
-            {
-
-                return View();
-            }
         }
         public ActionResult Info(int id)
         {
             //获取用户的id
-            try
-            {
                 int userID = Common.User.GetUserID(Session["Username"].ToString());
                 //获取我加入的社团数据
                     //获取每个社团的活动
@@ -108,11 +89,6 @@ namespace SCMS.Areas.student.Controllers
                 info.Comments = comments;
 
                 return View(info);
-            }
-            catch (Exception)
-            {
-                return View();
-            }
         }
         public bool UploadComment(string text)
         {

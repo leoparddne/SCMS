@@ -60,6 +60,10 @@ namespace SCMS.Areas.student.Controllers
             {
                 var model=clubBll.GetModel(p => (p.userid == userid & p.clubid == clubID));
                 clubBll.Delete(model,false);
+                //刷新视图数据
+                //获取我加入的社团数
+                var mine = new BLL.clubMember().GetRecordCount(p => p.userid == userid);
+                ViewBag.Mine = mine;
                 return true;
             }
             else

@@ -5,7 +5,7 @@
 <div class="module">
     <div class="module-head">
         <h3>
-            社团
+            我的社团活动
         </h3>
     </div>
     <div class="module-body table">
@@ -35,6 +35,9 @@
                         活动描述
                     </th>
                     <th>
+                        社团详情
+                    </th>
+                    <th>
                         详情
                     </th>
                 </tr>
@@ -49,42 +52,47 @@
                             int temp = 1;
                             if (temp % 2 == 0)
                             {
-                                <tr class="gradeX">
-                                    <td>@i.ClubID</td>
-                                    <td>@i.ClubName</td>
-                                    <td>@i.ActivityID</td>
-                                    <td>@i.ActivityName</td>
-                                    <td>@i.ActivityPlace</td>
-                                    <td>@i.ActivityTime</td>
-                                    <td>@i.ActivityInfo</td>
-                                    <td><a href="/student/Activity/Info/@i.ActivityID">详情</a></td>
-                                </tr>
+                <tr class="gradeX">
+                    <td>@i.ClubID</td>
+                    <td>@i.ClubName</td>
+                    <td>@i.ActivityID</td>
+                    <td>@i.ActivityName</td>
+                    <td>@i.ActivityPlace</td>
+                    <td>@i.ActivityTime</td>
+                    <td>@i.ActivityInfo</td>
+                    <td><a href="/student/Clubs/Info/@i.ClubID">详情</a></td>
+                    <td><a href="/student/Activity/Info/@i.ActivityID">详情</a></td>
+                </tr>
                             }
                             else
                             {
-                                <tr class="odd gradeX">
-                                    <td>@i.ClubID</td>
-                                    <td>@i.ClubName</td>
-                                    <td>@i.ActivityID</td>
-                                    <td>@i.ActivityName</td>
-                                    <td>@i.ActivityPlace</td>
-                                    <td>@i.ActivityTime</td>
-                                    <td>@i.ActivityInfo</td>
-                                    <td><a href="/student/Activity/Info/@i.ActivityID">详情</a></td>
-                                </tr>
+                <tr class="odd gradeX">
+                    <td>@i.ClubID</td>
+                    <td>@i.ClubName</td>
+                    <td>@i.ActivityID</td>
+                    <td>@i.ActivityName</td>
+                    <td>@i.ActivityPlace</td>
+                    <td>@i.ActivityTime</td>
+                    <td>@i.ActivityInfo</td>
+                    <td><a href="/student/Clubs/Info/@i.ClubID">详情</a></td>
+                    <td><a href="/student/Activity/Info/@i.ActivityID">详情</a></td>
+                </tr>
                             }
                         }
                     }
                     catch (Exception)
                     {
-                                <tr>
-                                    <td>暂无数据</td>
-                                    <td>暂无数据</td>
-                                    <td>暂无数据</td>
-                                    <td>暂无数据</td>
-                                    <td>暂无数据</td>
-                                    <td>暂无数据</td>
-                                </tr>
+                <tr>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>
                 }
                 }
                 </tbody>
