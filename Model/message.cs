@@ -26,6 +26,10 @@ public partial class message
 
     public int state { get; set; }
 
+    public int to { get; set; }
+
+    public string subject { get; set; }
+
 }
 
 }

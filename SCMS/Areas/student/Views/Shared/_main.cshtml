@@ -75,19 +75,28 @@
                             <li>
                                 <a href="/student/Messages/">
                                     <i class="menu-icon icon-inbox"></i>通知 <b class="label green pull-right">
-                                        11
+                                        @ViewBag.Message
+                                    </b>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <ul class="widget widget-menu unstyled">
+                            <li>
+                                <a href="/student/Activity/Mine">
+                                    <i class="menu-icon icon-tasks"></i>我的活动 <b class="label orange pull-right">
+                                         @ViewBag.MineActivity
                                     </b>
                                 </a>
                             </li>
                             <li>
                                 <a href="/student/Activity/">
-                                    <i class="menu-icon icon-tasks"></i>活动 <b class="label orange pull-right">
-                                        19
+                                    <i class="menu-icon icon-inbox"></i>活动 <b class="label green pull-right">
+                                        @ViewBag.Activity
                                     </b>
                                 </a>
                             </li>
                         </ul>
-
                     </div>
                     <!--/.sidebar-->
                 </div>

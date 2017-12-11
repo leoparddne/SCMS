@@ -20,6 +20,7 @@
     <Property Name="place" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="time" Type="datetime" Precision="0" Nullable="false" />
     <Property Name="other" Type="varchar" MaxLength="255" />
+    <Property Name="state" Type="int" />
   </EntityType>
   <EntityType Name="clubmanager">
     <Key>
@@ -44,6 +45,7 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="actID" Type="int" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
     <Property Name="text" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="time" Type="datetime" Precision="0" Nullable="false" />
   </EntityType>
@@ -53,6 +55,8 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="from" Type="int" Nullable="false" />
+    <Property Name="to" Type="int" Nullable="false" />
+    <Property Name="subject" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="context" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="state" Type="int" Nullable="false" />
   </EntityType>

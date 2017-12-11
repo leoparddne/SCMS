@@ -14,5 +14,11 @@ namespace Common
             var id= bll.GetModel(p => p.name == username).id;
             return id;
         }
+        public static string GetUserName(int id)
+        {
+            var bll = new BLL.user();
+            var name = bll.GetModel(p => p.id == id).name;
+            return name;
+        }
     }
 }

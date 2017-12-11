@@ -20,6 +20,7 @@
     <Property Name="place" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="time" Type="datetime" Precision="0" Nullable="false" />
     <Property Name="other" Type="varchar" MaxLength="255" />
+    <Property Name="state" Type="int" />
   </EntityType>
   <EntityType Name="clubmanager">
     <Key>
@@ -44,8 +45,20 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="actID" Type="int" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
     <Property Name="text" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="time" Type="datetime" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="message">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="from" Type="int" Nullable="false" />
+    <Property Name="to" Type="int" Nullable="false" />
+    <Property Name="subject" Type="varchar" MaxLength="255" />
+    <Property Name="context" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="state" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="newclub">
     <Key>
@@ -78,10 +91,10 @@
   </EntityType>
   <EntityType Name="user">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
     </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="id" Type="int" Nullable="false" />
     <Property Name="pwd" Type="varchar" MaxLength="32" Nullable="false" />
     <Property Name="sex" Type="int" Nullable="false" />
     <Property Name="age" Type="int" Nullable="false" />
@@ -94,6 +107,7 @@
     <EntitySet Name="clubmanager" EntityType="Self.clubmanager" Schema="scms" store:Type="Tables" />
     <EntitySet Name="clubmember" EntityType="Self.clubmember" Schema="scms" store:Type="Tables" />
     <EntitySet Name="comment" EntityType="Self.comment" Schema="scms" store:Type="Tables" />
+    <EntitySet Name="message" EntityType="Self.message" Schema="scms" store:Type="Tables" />
     <EntitySet Name="newclub" EntityType="Self.newclub" Schema="scms" store:Type="Tables" />
     <EntitySet Name="newmember" EntityType="Self.newmember" Schema="scms" store:Type="Tables" />
     <EntitySet Name="teacher" EntityType="Self.teacher" Schema="scms" store:Type="Tables" />

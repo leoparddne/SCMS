@@ -77,7 +77,6 @@ namespace BLL
         {
             CurrentRepository.Edit(model, propertyName);
         }
-
         public void Delete(T model, bool isAddedEFContext)
         {
             CurrentRepository.Delete(model, isAddedEFContext);

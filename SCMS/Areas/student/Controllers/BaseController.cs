@@ -32,6 +32,18 @@ namespace SCMS.Areas.student.Controllers
             ViewBag.Clubs = model.Clubs;
             ViewBag.Mine = model.Mine;
             ViewBag.NewClubs = model.NewClubs;
+
+            //获取通知与活动个数
+            ViewBag.Message = new BLL.messageBLL().GetRecordCount(p => p.to == userModel.id & p.state == 0);
+            ViewBag.Activity = new BLL.clubActivity().GetRecordCount();
+            //获取我所有加入的社团，然后查询
+            int count = 0;
+            var mineClubs = new BLL.clubMember().GetModels(p=>p.userid==userModel.id);
+            foreach (var item in mineClubs)
+            {
+                count += new BLL.clubActivity().GetRecordCount(p => p.clubID == item.clubid);
+            }
+            ViewBag.mineActivity = count;
         }
     }
     //自定义的异常处理

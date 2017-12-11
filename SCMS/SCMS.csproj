@@ -136,7 +136,8 @@
     <Content Include="Areas\manager\Views\Login\Login.cshtml" />
     <Content Include="Areas\student\Views\Clubs\Index.cshtml" />
     <Content Include="Areas\student\Views\Clubs\Add.cshtml" />
-    <Content Include="Areas\student\Views\Activity\Index.cshtml" />
+    <Content Include="Areas\student\Views\Activity\Info.cshtml" />
+    <Content Include="Areas\student\Views\Activity\Mine.cshtml" />
     <None Include="Areas\student\Views\Login\Login.cshtml" />
     <None Include="Areas\student\Views\Home\Index.cshtml" />
     <Content Include="Content\admin\activity.html" />
@@ -281,6 +282,7 @@
     <Content Include="Areas\student\Views\NewClubs\Cancel.cshtml" />
     <Content Include="Areas\student\Views\NewClubs\Index.cshtml" />
     <Content Include="Areas\student\Views\Messages\Index.cshtml" />
+    <Content Include="Areas\student\Views\PersonalCenter\Index.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -307,6 +309,8 @@
     <Compile Include="Areas\student\Controllers\MineController.cs" />
     <Compile Include="Areas\student\Controllers\NewClubsController.cs" />
     <Compile Include="Areas\student\Controllers\PersonalCenterController.cs" />
+    <Compile Include="Areas\student\Models\Activity.cs" />
+    <Compile Include="Areas\student\Models\ActivityMoreInfo.cs" />
     <Compile Include="Areas\student\Models\AddClub.cs" />
     <Compile Include="Areas\student\Models\CancelClub.cs" />
     <Compile Include="Areas\student\Models\DushBoard.cs" />
@@ -351,7 +355,6 @@
     <Folder Include="Areas\manager\Models\" />
     <Folder Include="Areas\manager\Views\Home\" />
     <Folder Include="Areas\manager\Views\Shared\" />
-    <Folder Include="Areas\student\Views\PersonalCenter\" />
     <Folder Include="Areas\teacher\Models\" />
     <Folder Include="Areas\teacher\Views\Home\" />
     <Folder Include="Areas\teacher\Views\Shared\" />

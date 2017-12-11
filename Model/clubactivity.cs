@@ -30,6 +30,8 @@ public partial class clubactivity
 
     public string other { get; set; }
 
+    public Nullable<int> state { get; set; }
+
 }
 
 }

@@ -26,6 +26,8 @@ public partial class comment
 
     public System.DateTime time { get; set; }
 
+    public int userID { get; set; }
+
 }
 
 }

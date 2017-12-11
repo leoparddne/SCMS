@@ -15,3 +15,4 @@ E:\SCMS\SCMS\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
 E:\SCMS\SCMS\Common\obj\Release\Common.csproj.CoreCompileInputs.cache
 E:\SCMS\SCMS\Common\obj\Release\Common.dll
 E:\SCMS\SCMS\Common\obj\Release\Common.pdb
+E:\SCMS\SCMS\Common\bin\Release\Common.dll.config

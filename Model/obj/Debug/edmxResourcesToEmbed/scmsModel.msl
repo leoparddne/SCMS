@@ -15,6 +15,7 @@
     <EntitySetMapping Name="clubactivity">
       <EntityTypeMapping TypeName="scmsModel.clubactivity">
         <MappingFragment StoreEntitySet="clubactivity">
+          <ScalarProperty Name="state" ColumnName="state" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="clubID" ColumnName="clubID" />
           <ScalarProperty Name="name" ColumnName="name" />
@@ -46,6 +47,7 @@
     <EntitySetMapping Name="comment">
       <EntityTypeMapping TypeName="scmsModel.comment">
         <MappingFragment StoreEntitySet="comment">
+          <ScalarProperty Name="userID" ColumnName="userID" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="actID" ColumnName="actID" />
           <ScalarProperty Name="text" ColumnName="text" />
@@ -101,6 +103,8 @@
     <EntitySetMapping Name="message">
       <EntityTypeMapping TypeName="scmsModel.message">
         <MappingFragment StoreEntitySet="message">
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="to" ColumnName="to" />
           <ScalarProperty Name="state" ColumnName="state" />
           <ScalarProperty Name="context" ColumnName="context" />
           <ScalarProperty Name="from" ColumnName="from" />

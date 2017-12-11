@@ -13,8 +13,14 @@ namespace SCMS.Areas.student.Models
         int clubs;
         int mine;
         int newClubs;
+        int message;
+        int activity;
+        int mineActivity;
         public int Clubs { get => clubs; set => clubs = value; }
         public int Mine { get => mine; set => mine = value; }
         public int NewClubs { get => newClubs; set => newClubs = value; }
+        public int Message { get => message; set => message = value; }
+        public int Activity { get => activity; set => activity = value; }
+        public int MineActivity { get => mineActivity; set => mineActivity = value; }
     }
 }

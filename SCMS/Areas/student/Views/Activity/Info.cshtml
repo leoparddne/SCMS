@@ -1,0 +1,102 @@
+﻿@{
+    Layout = "~/Areas/student/Views/Shared/_main.cshtml";
+}
+
+
+                <div class="alert alert-error" style="display:none" id="commentError">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>评论错误!</strong> 请重试，不可发送空评论。
+                </div>
+
+                <div class="alert alert-success" style="display:none" id="commentSuccess">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>评论成功!</strong>  :)
+                </div>
+
+
+<br>
+<div class="content">
+    <div class="module">
+        <div class="module-head">
+            <h3>@Model.Activity.ActivityName</h3>
+        </div>
+        <div class="module-body">
+            <div class="stream-composer media" id="actInfo">
+                <a href="#" class="media-avatar medium pull-left">
+                    <img src="/Content/admin/images/user.png">
+                </a>
+                <div class="media-body">
+                    <div class="row-fluid">
+                        <textarea class="span12" id="commentText" style="height: 70px; resize: none;"></textarea>
+                    </div>
+                    <script>
+                        function updateComment() {
+                            var info = document.getElementById("commentText").value;
+                            $.ajax({
+                                url: "/student/Activity/UploadComment",
+                                dataType: "text",
+                                data: { actID: "@Model.Activity.ActivityID", text: info },
+                                success: function (date) {
+                                    if (date == "True") {
+                                        document.getElementById("commentSuccess").style.display = "";
+                                        document.getElementById("commentError").style.display = "none";
+                                        window.location.reload(true);
+                                    }
+                                    else {
+                                        document.getElementById("commentError").style.display = "";
+                                        document.getElementById("commentSuccess").style.display = "none";
+                                    }
+                                }
+                            });
+                        }
+                    </script>
+                    <div class="clearfix">
+                        <a href="#" class="btn btn-primary pull-right" onclick="updateComment()">
+                            Update Status
+                        </a>
+                       
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="stream-list">
+                <div class="media stream new-update">
+                    <a href="/student/Activity/Info/@Model.Activity.ActivityID">
+                        <i class="icon-refresh shaded"></i>
+                        show more...
+                    </a>
+                </div>
+                @{
+        foreach (var item in Model.Comments)
+        {
+            <div class="media stream">
+                <a href="#" class="media-avatar medium pull-left">
+                    <img src="/Content/admin/images/user.png">
+                </a>
+                <div class="media-body">
+                    <div class="stream-headline">
+                        <h5 class="stream-author">
+                            @Common.User.GetUserName(item.userID)
+                            <small>@item.time.ToString()</small>
+                        </h5>
+                        <div class="stream-text">
+                            @item.text
+                        </div>
+                    </div><!--/.stream-headline-->
+
+                </div>
+            </div><!--/.media .stream-->
+
+}
+                }
+                <div class="media stream load-more">
+                    <a href="/student/Activity/Info/@Model.Activity.ActivityID">
+                        <i class="icon-refresh shaded"></i>
+                        show more...
+                    </a>
+                </div>
+            </div><!--/.stream-list-->
+        </div><!--/.module-body-->
+    </div><!--/.module-->
+
+</div>

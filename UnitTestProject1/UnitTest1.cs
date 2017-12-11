@@ -55,5 +55,16 @@ namespace UnitTestProject1
             Console.WriteLine(JsonConvert.SerializeObject(model));
 
         }
+        [TestMethod]
+        public void t()
+        {
+            var model = new Model.message() ;
+            model.id = 3;
+            model.state = 1;
+            var bll = new BLL.messageBLL();
+            bll.Update(model, new[] { "id", "state" });
+            if (!bll.Exist(p => p.id == 3))
+                Console.WriteLine(true);
+        }
     }
 }

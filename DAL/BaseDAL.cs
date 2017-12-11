@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -81,15 +78,15 @@ namespace DAL
             //将model追加到EF容器
             var entry = DataContext.Entry(model);
 
-            entry.State = EntityState.Unchanged;
+            //entry.State = EntityState.Unchanged;
 
             foreach (var item in propertyName)
             {
-                entry.Property(item).IsModified = true;
+                //entry.Property(item)=model.
+                entry.Property(item).IsModified = true; 
             }
             SaveChanges();
         }
-
         #endregion
 
         #region 物理删除

@@ -20,6 +20,7 @@
     <Property Name="place" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="time" Type="DateTime" Nullable="false" />
     <Property Name="other" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="Int32" />
   </EntityType>
   <EntityType Name="clubmanager">
     <Key>
@@ -46,6 +47,7 @@
     <Property Name="actID" Type="Int32" Nullable="false" />
     <Property Name="text" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="time" Type="DateTime" Nullable="false" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="newclub">
     <Key>
@@ -108,5 +110,7 @@
     <Property Name="from" Type="Int32" Nullable="false" />
     <Property Name="context" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="to" Type="Int32" Nullable="false" />
+    <Property Name="subject" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
   </EntityType>
 </Schema>

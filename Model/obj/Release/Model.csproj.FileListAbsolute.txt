@@ -7,3 +7,4 @@ E:\SCMS\SCMS\Model\bin\Release\zh-Hans\EntityFramework.resources.dll
 E:\SCMS\SCMS\Model\obj\Release\Model.csproj.CoreCompileInputs.cache
 E:\SCMS\SCMS\Model\obj\Release\Model.dll
 E:\SCMS\SCMS\Model\obj\Release\Model.pdb
+E:\SCMS\SCMS\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
