@@ -285,6 +285,10 @@
     <Content Include="Areas\student\Views\Messages\Index.cshtml" />
     <Content Include="Areas\student\Views\PersonalCenter\Index.cshtml" />
     <Content Include="Areas\student\Views\NewClubs\Result.cshtml" />
+    <Content Include="Areas\teacher\Views\Shared\_main.cshtml" />
+    <Content Include="Areas\teacher\Views\Home\Shared\_main.cshtml" />
+    <Content Include="Areas\teacher\Views\Home\Index.cshtml" />
+    <Content Include="Areas\teacher\Views\Home\Quit.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -319,6 +323,7 @@
     <Compile Include="Areas\student\Models\DushBoard.cs" />
     <Compile Include="Areas\student\Models\QuitClub.cs" />
     <Compile Include="Areas\student\studentAreaRegistration.cs" />
+    <Compile Include="Areas\teacher\Controllers\BaseController.cs" />
     <Compile Include="Areas\teacher\Controllers\HomeController.cs" />
     <Compile Include="Areas\teacher\Controllers\LoginController.cs" />
     <Compile Include="Areas\teacher\teacherAreaRegistration.cs" />
@@ -359,8 +364,6 @@
     <Folder Include="Areas\manager\Views\Home\" />
     <Folder Include="Areas\manager\Views\Shared\" />
     <Folder Include="Areas\teacher\Models\" />
-    <Folder Include="Areas\teacher\Views\Home\" />
-    <Folder Include="Areas\teacher\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

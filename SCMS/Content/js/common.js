@@ -10,35 +10,24 @@
     }
     return theRequest;
 }
-function showErrorPWD() {
+function showError(error) {
     var info = document.getElementById("errorInfo");
+    info.innerText = error;
     info.style.display = "";
-    hidePowerDeny();
 }
-function hideErrorPWD() {
+function hideError() {
     var info = document.getElementById("errorInfo");
     info.style.display = "none";
 }
-function showPowerDeny() {
-    var info = document.getElementById("powerDeny");
-    info.style.display = "";
-    hideErrorPWD();
-}
-function hidePowerDeny() {
-    var info = document.getElementById("powerDeny");
-    info.style.display = "none";
-}
-function hideAllElement() {
-    hideErrorPWD();
-    hidePowerDeny();
-}
+
  function errorInfo() {
     var Request = new Object();
     Request = GetRequest();
     var errorMSG = Request['errorMSG'];
     switch (errorMSG) {
-        case "1": showErrorPWD(); break;
-        case "2": showPowerDeny(); break;
+        case "1": showError("用户名或密码错误"); break;
+        case "2": showError("无权限"); break;
+        case "3": showError("未登录"); break;
         default: hideAllElement(); break;
     }
 }
