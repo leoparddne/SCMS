@@ -139,6 +139,7 @@
     <Content Include="Areas\student\Views\Activity\Info.cshtml" />
     <Content Include="Areas\student\Views\Activity\Mine.cshtml" />
     <Content Include="Areas\student\Views\Clubs\Info.cshtml" />
+    <Content Include="Areas\manager\Views\Home\Index.cshtml" />
     <None Include="Areas\student\Views\Login\Login.cshtml" />
     <None Include="Areas\student\Views\Home\Index.cshtml" />
     <Content Include="Content\admin\activity.html" />
@@ -302,6 +303,7 @@
     <Compile Include="App_Start\isAuthorizeAttribute.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
+    <Compile Include="Areas\manager\Controllers\BaseController.cs" />
     <Compile Include="Areas\admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\manager\Controllers\HomeController.cs" />
     <Compile Include="Areas\manager\Controllers\LoginController.cs" />
@@ -324,8 +326,11 @@
     <Compile Include="Areas\student\Models\QuitClub.cs" />
     <Compile Include="Areas\student\studentAreaRegistration.cs" />
     <Compile Include="Areas\teacher\Controllers\BaseController.cs" />
+    <Compile Include="Areas\teacher\Controllers\ClubsController.cs" />
     <Compile Include="Areas\teacher\Controllers\HomeController.cs" />
     <Compile Include="Areas\teacher\Controllers\LoginController.cs" />
+    <Compile Include="Areas\teacher\Controllers\NewActivityController.cs" />
+    <Compile Include="Areas\teacher\Controllers\NewClubController.cs" />
     <Compile Include="Areas\teacher\teacherAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -361,9 +366,11 @@
     <Folder Include="Areas\admin\Models\" />
     <Folder Include="Areas\admin\Views\Shared\" />
     <Folder Include="Areas\manager\Models\" />
-    <Folder Include="Areas\manager\Views\Home\" />
     <Folder Include="Areas\manager\Views\Shared\" />
     <Folder Include="Areas\teacher\Models\" />
+    <Folder Include="Areas\teacher\Views\Clubs\" />
+    <Folder Include="Areas\teacher\Views\NewActivity\" />
+    <Folder Include="Areas\teacher\Views\NewClub\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

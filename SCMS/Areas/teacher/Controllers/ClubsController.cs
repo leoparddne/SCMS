@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SCMS.Areas.manager.Controllers
+namespace SCMS.Areas.teacher.Controllers
 {
-    public class HomeController : BaseController
+    public class ClubsController : BaseController
     {
-        // GET: manager/Home
+        // GET: teacher/Clubs
         public ActionResult Index()
         {
             return View();

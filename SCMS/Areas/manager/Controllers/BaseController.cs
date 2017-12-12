@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SCMS.Areas.teacher.Controllers
+namespace SCMS.Areas.manager.Controllers
 {
     public class BaseController : Controller
     {
@@ -21,10 +21,10 @@ namespace SCMS.Areas.teacher.Controllers
             string name = ViewBag.Username;
             var userModel = user.GetModel(p => p.name == name);
             //验证用户权限
-            if (!new BLL.teacher().Exist(p => p.userID == userModel.id))
+            if (!new BLL.clubMember().Exist(p => p.userid == userModel.id))
             {
                 //返回用户登录界面
-                Response.Redirect("/teacher/Login/Login");
+                Response.Redirect("/manager/Login/Login");
             }
             //获取所有社团数
             DushBoard model = new DushBoard();

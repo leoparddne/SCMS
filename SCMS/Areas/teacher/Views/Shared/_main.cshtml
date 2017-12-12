@@ -65,45 +65,21 @@
                     <div class="sidebar">
                         <ul class="widget widget-menu unstyled">
                             <li class="active">
-                                <a href="/student/Home/">
+                                <a href="/teacher/Home/">
                                     <i class="menu-icon icon-dashboard" style="color:white;"></i>面板
                                 </a>
                             </li>
                             <li>
-                                <a href="/student/Clubs/"><i class="menu-icon icon-paste"></i>社团 </a>
+                                <a href="/teacher/Clubs/"><i class="menu-icon icon-paste"></i>社团 </a>
                             </li>
                             <li>
-                                <a href="/student/NewClubs/Result">
-                                    <i class="menu-icon icon-bar-chart"></i>申请结果 <b class="label orange pull-right">
-                                        @ViewBag.ApplyResult
-                                    </b>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/student/Messages/">
-                                    <i class="menu-icon icon-bullhorn"></i>通知 <b class="label green pull-right">
-                                        @ViewBag.Message
-                                    </b>
+                                <a href="/student/Activity/">
+                                    <i class="menu-icon icon-bar-chart"></i>社团活动 
                                 </a>
                             </li>
 
                         </ul>
-                        <ul class="widget widget-menu unstyled">
-                            <li>
-                                <a href="/student/Activity/Mine">
-                                    <i class="menu-icon icon-table"></i>我的活动 <b class="label orange pull-right">
-                                         @ViewBag.MineActivity
-                                    </b>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/student/Activity/">
-                                    <i class="menu-icon icon-table"></i>活动 <b class="label green pull-right">
-                                        @ViewBag.Activity
-                                    </b>
-                                </a>
-                            </li>
-                        </ul>
+                        
                     </div>
                     <!--/.sidebar-->
                 </div>
@@ -112,22 +88,22 @@
                     <div class="content">
                         <div class="btn-controls">
                             <div class="btn-box-row row-fluid">
-                                <a href="/student/Clubs/" class="btn-box big span4">
+                                <a href="/teacher/Clubs/" class="btn-box big span4">
                                     <i class=" icon-random"></i><b>@ViewBag.Clubs</b>
                                     <p class="text-muted">
                                         总社团数
                                     </p>
                                 </a>
-                                <a href="/student/Mine/" class="btn-box big span4">
-                                    <i class="icon-user"></i><b>@ViewBag.Mine</b>
+                                <a href="/teacher/NewClub/" class="btn-box big span4">
+                                    <i class="icon-user"></i><b>@ViewBag.ClubApply</b>
                                     <p class="text-muted">
-                                        我的社团
+                                        社团申请
                                     </p>
                                 </a>
-                                <a href="/student/NewClubs/" class="btn-box big span4">
-                                    <i class="icon-money"></i><b>@ViewBag.NewClubs</b>
+                                <a href="/teacher/NewActivity/" class="btn-box big span4">
+                                    <i class="icon-money"></i><b>@ViewBag.ActivityApply</b>
                                     <p class="text-muted">
-                                        申请中的社团
+                                        活动申请
                                     </p>
                                 </a>
                             </div>

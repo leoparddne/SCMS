@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace SCMS.Areas.teacher.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         // GET: teacher/Home
         public ActionResult Index()
