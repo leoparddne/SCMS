@@ -35,13 +35,13 @@ namespace SCMS.Areas.student.Controllers
 
             //获取通知与活动个数
             ViewBag.Message = new BLL.messageBLL().GetRecordCount(p => p.to == userModel.id & p.state == 0);
-            ViewBag.Activity = new BLL.clubActivity().GetRecordCount();
+            ViewBag.Activity = new BLL.clubActivity().GetRecordCount(p => p.state == 1);
             //获取我所有加入的社团，然后查询
             int count = 0;
             var mineClubs = new BLL.clubMember().GetModels(p=>p.userid==userModel.id);
             foreach (var item in mineClubs)
             {
-                count += new BLL.clubActivity().GetRecordCount(p => p.clubID == item.clubid);
+                count += new BLL.clubActivity().GetRecordCount(p => p.clubID == item.clubid &p.state==1);
             }
             ViewBag.mineActivity = count;
             //获取未读申请结果个数

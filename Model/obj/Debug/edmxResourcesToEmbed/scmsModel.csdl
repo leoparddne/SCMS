@@ -58,6 +58,7 @@
     <Property Name="userID" Type="Int32" Nullable="false" />
     <Property Name="logo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="describe" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="state" Type="Int32" />
   </EntityType>
   <EntityType Name="newmember">
     <Key>

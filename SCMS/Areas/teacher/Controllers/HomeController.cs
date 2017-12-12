@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace SCMS.Areas.teacher.Controllers
 {
+    [TeacherExceptionFilter]
     public class HomeController : BaseController
     {
         // GET: teacher/Home

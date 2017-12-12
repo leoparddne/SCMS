@@ -24,33 +24,14 @@ namespace SCMS.Areas.teacher.Controllers
             if (!new BLL.teacher().Exist(p => p.userID == userModel.id))
             {
                 //返回用户登录界面
-                Response.Redirect("/teacher/Login/Login");
+                Response.Redirect("/teacher/Login/Login?errorMSG=2");
             }
-            //获取所有社团数
-            DushBoard model = new DushBoard();
-            model.Clubs = new BLL.ClubBLL().GetRecordCount();
-            //获取我加入的社团数
-            model.Mine = new BLL.clubMember().GetRecordCount(p => p.userid == userModel.id);
+            //获取社团个数
+            ViewBag.Clubs = new BLL.ClubBLL().GetRecordCount();
+            //获取申请中的活动
+            ViewBag.ActivityApply = new BLL.clubActivity().GetRecordCount(p => p.state == 0);
             //获取申请中的新社团
-            model.NewClubs = new BLL.newMember().GetRecordCount(p => p.userID == userModel.id & p.state == 0);
-
-            ViewBag.Clubs = model.Clubs;
-            ViewBag.Mine = model.Mine;
-            ViewBag.NewClubs = model.NewClubs;
-
-            //获取通知与活动个数
-            ViewBag.Message = new BLL.messageBLL().GetRecordCount(p => p.to == userModel.id & p.state == 0);
-            ViewBag.Activity = new BLL.clubActivity().GetRecordCount();
-            //获取我所有加入的社团，然后查询
-            int count = 0;
-            var mineClubs = new BLL.clubMember().GetModels(p => p.userid == userModel.id);
-            foreach (var item in mineClubs)
-            {
-                count += new BLL.clubActivity().GetRecordCount(p => p.clubID == item.clubid);
-            }
-            ViewBag.mineActivity = count;
-            //获取未读申请结果个数
-            ViewBag.ApplyResult = new BLL.newMember().GetRecordCount(p => p.userID == userModel.id & p.state != 0 & p.state != 3);
+            ViewBag.ClubApply = new BLL.newClub().GetRecordCount(p => p.userID == userModel.id & p.state == 0);
         }
     }
     //自定义的异常处理

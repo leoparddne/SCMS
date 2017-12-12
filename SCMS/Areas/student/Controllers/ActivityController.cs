@@ -14,7 +14,8 @@ namespace SCMS.Areas.student.Controllers
         public ActionResult Index()
         {
                 List<Activity> list = new List<Activity>();
-                var activities = new BLL.clubActivity().GetList();
+            //获取审核通过的活动
+                var activities = new BLL.clubActivity().GetList(p=>p.state==1);
                 //将需要的社团活动信息填充入list
 
                 foreach (var item in activities)
@@ -44,8 +45,8 @@ namespace SCMS.Areas.student.Controllers
 
                 foreach (var item in mineClub)
                 {
-                    //获取每个社团的活动
-                    var activities = new BLL.clubActivity().GetModels(p => p.clubID == item.clubid);
+                    //获取每个社团审核通过的活动
+                    var activities = new BLL.clubActivity().GetModels(p => p.clubID == item.clubid & p.state == 1);
                     //将需要的社团活动信息填充入list
 
                     foreach (var j in activities)
@@ -70,8 +71,8 @@ namespace SCMS.Areas.student.Controllers
             //获取用户的id
                 int userID = Common.User.GetUserID(Session["Username"].ToString());
                 //获取我加入的社团数据
-                    //获取每个社团的活动
-                    var activities = new BLL.clubActivity().GetModel(p => p.id == id);
+                    //获取每个社团审核通过的活动
+                    var activities = new BLL.clubActivity().GetModel(p => p.id == id&p.state == 1);
                     //将需要的社团活动信息填充入list
                         var model = new Activity();
                         model.ActivityID = activities.id;

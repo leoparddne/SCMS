@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-12-12 19:28:49
+Date: 2017-12-13 01:02:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,11 +22,11 @@ DROP TABLE IF EXISTS `club`;
 CREATE TABLE `club` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) CHARACTER SET utf8 NOT NULL,
-  `state` int(11) NOT NULL,
+  `state` int(11) DEFAULT NULL,
   `logo` varchar(255) NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of club
@@ -51,6 +51,14 @@ INSERT INTO `club` VALUES ('18', '测试', '1', '/Content/images/comment/3.jpg',
 INSERT INTO `club` VALUES ('19', '测试', '1', '/Content/images/comment/3.jpg', '2017-12-08 11:53:00');
 INSERT INTO `club` VALUES ('20', '测试', '1', '/Content/images/comment/3.jpg', '2017-12-08 11:53:00');
 INSERT INTO `club` VALUES ('21', '测试', '1', '/Content/images/comment/3.jpg', '2017-12-08 11:53:00');
+INSERT INTO `club` VALUES ('22', '测试社团申请', '0', '/Content/images/comment/2.jpg', '2017-12-13 00:56:45');
+INSERT INTO `club` VALUES ('23', '测试', '0', '/Content/images/comment/2.jpg', '2017-12-13 00:56:55');
+INSERT INTO `club` VALUES ('24', '测试社团申请', '0', '/Content/images/comment/2.jpg', '2017-12-13 00:58:04');
+INSERT INTO `club` VALUES ('25', '测试社团申请', '0', '/Content/images/comment/2.jpg', '2017-12-13 00:58:17');
+INSERT INTO `club` VALUES ('26', '测试社团申请', '0', '/Content/images/comment/2.jpg', '2017-12-13 00:58:17');
+INSERT INTO `club` VALUES ('27', '测试社团申请', '0', '/Content/images/comment/2.jpg', '2017-12-13 00:58:18');
+INSERT INTO `club` VALUES ('28', '测试社团申请', '0', '/Content/images/comment/2.jpg', '2017-12-13 00:58:19');
+INSERT INTO `club` VALUES ('29', '测试2', '0', '/Content/images/comment/2.jpg', '2017-12-13 00:59:45');
 
 -- ----------------------------
 -- Table structure for clubactivity
@@ -72,7 +80,7 @@ CREATE TABLE `clubactivity` (
 -- ----------------------------
 INSERT INTO `clubactivity` VALUES ('1', '2', 'a', 'a', '2017-11-30 23:02:38', null, '1');
 INSERT INTO `clubactivity` VALUES ('2', '2', 'ab', 'a', '2017-11-30 23:03:02', null, '1');
-INSERT INTO `clubactivity` VALUES ('3', '6', '测试活动', '测试场地', '2017-12-30 20:45:52', null, '1');
+INSERT INTO `clubactivity` VALUES ('3', '6', '测试活动', '测试场地', '2017-12-30 20:45:52', null, '0');
 
 -- ----------------------------
 -- Table structure for clubmanager
@@ -168,12 +176,16 @@ CREATE TABLE `newclub` (
   `userID` int(11) NOT NULL,
   `logo` varchar(255) CHARACTER SET utf8 NOT NULL,
   `describe` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `state` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of newclub
 -- ----------------------------
+INSERT INTO `newclub` VALUES ('1', '测试社团申请', '1', '/Content/images/comment/2.jpg', '测试社团描述', '1');
+INSERT INTO `newclub` VALUES ('2', '测试', '1', '/Content/images/comment/2.jpg', '测试', '1');
+INSERT INTO `newclub` VALUES ('3', '测试2', '1', '/Content/images/comment/2.jpg', '测试', '1');
 
 -- ----------------------------
 -- Table structure for newmember

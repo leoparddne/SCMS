@@ -5,7 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="0f896f9e6ad64cbc8d51acc667a1446d" Name="Diagram1">
-        <EntityTypeShape EntityType="scmsModel.club" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="scmsModel.clubactivity" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="scmsModel.clubmanager" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="scmsModel.clubmember" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
@@ -15,6 +14,7 @@
         <EntityTypeShape EntityType="scmsModel.teacher" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="scmsModel.user" Width="1.5" PointX="3.375" PointY="6.75" />
         <EntityTypeShape EntityType="scmsModel.message" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="scmsModel.club" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -287,9 +287,15 @@
     <Content Include="Areas\student\Views\PersonalCenter\Index.cshtml" />
     <Content Include="Areas\student\Views\NewClubs\Result.cshtml" />
     <Content Include="Areas\teacher\Views\Shared\_main.cshtml" />
-    <Content Include="Areas\teacher\Views\Home\Shared\_main.cshtml" />
     <Content Include="Areas\teacher\Views\Home\Index.cshtml" />
     <Content Include="Areas\teacher\Views\Home\Quit.cshtml" />
+    <Content Include="Areas\teacher\Views\NewActivity\Index.cshtml" />
+    <Content Include="Areas\teacher\Views\Clubs\Index.cshtml" />
+    <Content Include="Areas\teacher\Views\Clubs\Info.cshtml" />
+    <Content Include="Areas\teacher\Views\Activity\Info.cshtml" />
+    <Content Include="Areas\teacher\Views\Activity\Mine.cshtml" />
+    <Content Include="Areas\teacher\Views\PersonalCenter\Index.cshtml" />
+    <Content Include="Areas\teacher\Views\NewClub\Index.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -325,12 +331,14 @@
     <Compile Include="Areas\student\Models\DushBoard.cs" />
     <Compile Include="Areas\student\Models\QuitClub.cs" />
     <Compile Include="Areas\student\studentAreaRegistration.cs" />
+    <Compile Include="Areas\teacher\Controllers\ActivityController.cs" />
     <Compile Include="Areas\teacher\Controllers\BaseController.cs" />
     <Compile Include="Areas\teacher\Controllers\ClubsController.cs" />
     <Compile Include="Areas\teacher\Controllers\HomeController.cs" />
     <Compile Include="Areas\teacher\Controllers\LoginController.cs" />
     <Compile Include="Areas\teacher\Controllers\NewActivityController.cs" />
     <Compile Include="Areas\teacher\Controllers\NewClubController.cs" />
+    <Compile Include="Areas\teacher\Controllers\PersonalCenterController.cs" />
     <Compile Include="Areas\teacher\teacherAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -368,9 +376,6 @@
     <Folder Include="Areas\manager\Models\" />
     <Folder Include="Areas\manager\Views\Shared\" />
     <Folder Include="Areas\teacher\Models\" />
-    <Folder Include="Areas\teacher\Views\Clubs\" />
-    <Folder Include="Areas\teacher\Views\NewActivity\" />
-    <Folder Include="Areas\teacher\Views\NewClub\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

@@ -28,6 +28,8 @@ public partial class newclub
 
     public string describe { get; set; }
 
+    public Nullable<int> state { get; set; }
+
 }
 
 }

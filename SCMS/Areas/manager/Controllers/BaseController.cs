@@ -46,7 +46,7 @@ namespace SCMS.Areas.manager.Controllers
             var mineClubs = new BLL.clubMember().GetModels(p => p.userid == userModel.id);
             foreach (var item in mineClubs)
             {
-                count += new BLL.clubActivity().GetRecordCount(p => p.clubID == item.clubid);
+                count += new BLL.clubActivity().GetRecordCount(p => p.clubID == item.clubid &p.state==1);
             }
             ViewBag.mineActivity = count;
             //获取未读申请结果个数

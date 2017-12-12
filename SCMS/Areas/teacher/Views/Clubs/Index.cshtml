@@ -1,0 +1,87 @@
+﻿@{
+    Layout = "~/Areas/teacher/Views/Shared/_main.cshtml";
+}
+<div class="module">
+    <div class="module-head">
+        <h3>
+            社团列表
+        </h3>
+    </div>
+    <div class="module-body table">
+        <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display"
+               width="100%">
+            <thead>
+                <tr>
+
+                    <th>
+                        社团编号
+                    </th>
+                    <th>
+                        社团名称
+                    </th>
+                    <th>
+                        社团状态
+                    </th>
+                    <th>
+                        社团logo
+                    </th>
+                    <th>
+                        创建日期
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                   try 
+	{	        
+		 foreach (Model.club i in Model)
+                    {
+                        int temp = 0;
+                        string style = "odd";
+                        if (temp++ % 2 == 0)
+                        {
+                            style = "gradeX";
+                        }
+                        else
+                        {
+                            style = "odd gradeX";
+                        }
+                        if (Common.Club.HasJoinedClub(Common.User.GetUserID(Session["Username"].ToString()), i.id))
+                        {
+                                <tr class="@style">
+                                    <td>@i.id</td>
+                                    <td>@i.name</td>
+                                    <td>@i.state</td>
+                                    <td><img src="@i.logo" style="width:150px;height:150px;" alt="社团照片" /></td>
+                                    <td>@i.date</td>
+                                </tr>
+                            }
+                            else
+                            {
+                                <tr class="@style">
+                                    <td>@i.id</td>
+                                    <td>@i.name</td>
+                                    <td>@i.state</td>
+                                    <td><img src="@i.logo" style="width:150px;height:150px;" alt="社团照片" /></td>
+                                    <td>@i.date</td>
+                                </tr>
+                            }
+                    }
+	}
+	catch (Exception)
+	{
+		
+                                <tr>
+                                    <td>暂无数据</td>
+                                    <td>暂无数据</td>
+                                    <td>暂无数据</td>
+                                    <td>暂无数据</td>
+                                    <td>暂无数据</td>
+                                </tr>
+	}
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>

@@ -20,3 +20,16 @@ E:\SCMS\SCMS\Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
 E:\SCMS\SCMS\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 E:\SCMS\SCMS\Model\obj\Debug\Model.dll
 E:\SCMS\SCMS\Model\obj\Debug\Model.pdb
+E:\SCMS_GIT\SCMS\Model\bin\Debug\Model.dll.config
+E:\SCMS_GIT\SCMS\Model\bin\Debug\Model.dll
+E:\SCMS_GIT\SCMS\Model\bin\Debug\Model.pdb
+E:\SCMS_GIT\SCMS\Model\bin\Debug\EntityFramework.dll
+E:\SCMS_GIT\SCMS\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\SCMS_GIT\SCMS\Model\bin\Debug\EntityFramework.xml
+E:\SCMS_GIT\SCMS\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\SCMS_GIT\SCMS\Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\SCMS_GIT\SCMS\Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\SCMS_GIT\SCMS\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\SCMS_GIT\SCMS\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+E:\SCMS_GIT\SCMS\Model\obj\Debug\Model.dll
+E:\SCMS_GIT\SCMS\Model\obj\Debug\Model.pdb

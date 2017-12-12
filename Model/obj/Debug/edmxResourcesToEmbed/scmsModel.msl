@@ -58,6 +58,7 @@
     <EntitySetMapping Name="newclub">
       <EntityTypeMapping TypeName="scmsModel.newclub">
         <MappingFragment StoreEntitySet="newclub">
+          <ScalarProperty Name="state" ColumnName="state" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="userID" ColumnName="userID" />

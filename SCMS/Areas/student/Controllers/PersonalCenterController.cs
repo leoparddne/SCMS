@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace SCMS.Areas.student.Controllers
 {
+    [StudentExceptionFilter]
     public class PersonalCenterController : BaseController
     {
         // GET: student/PersonalCenter

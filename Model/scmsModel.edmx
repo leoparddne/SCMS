@@ -11,7 +11,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="state" Type="int" Nullable="false" />
+          <Property Name="state" Type="int" />
           <Property Name="logo" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="date" Type="datetime" Precision="0" Nullable="false" />
         </EntityType>
@@ -74,6 +74,7 @@
           <Property Name="userID" Type="int" Nullable="false" />
           <Property Name="logo" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="describe" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="state" Type="int" />
         </EntityType>
         <EntityType Name="newmember">
           <Key>
@@ -180,6 +181,7 @@
           <Property Name="userID" Type="Int32" Nullable="false" />
           <Property Name="logo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="describe" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="state" Type="Int32" />
         </EntityType>
         <EntityType Name="newmember">
           <Key>
@@ -298,6 +300,7 @@
           <EntitySetMapping Name="newclub">
             <EntityTypeMapping TypeName="scmsModel.newclub">
               <MappingFragment StoreEntitySet="newclub">
+                <ScalarProperty Name="state" ColumnName="state" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="userID" ColumnName="userID" />
