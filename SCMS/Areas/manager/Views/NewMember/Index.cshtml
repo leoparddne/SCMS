@@ -5,7 +5,7 @@
 <div class="module">
     <div class="module-head">
         <h3>
-            社团活动
+            入社申请
         </h3>
     </div>
     <div class="module-body table">
@@ -14,25 +14,25 @@
             <thead>
                 <tr>
                     <th>
-                        活动编号
+                        申请编号
                     </th>
                     <th>
-                        活动名称
+                        用户
                     </th>
                     <th>
-                        活动地点
+                        社团编号
                     </th>
                     <th>
-                        活动时间
+                        社团名称
                     </th>
                     <th>
-                        其他信息
+                        申请时间
                     </th>
                     <th>
-                        是否通过
+                        通过申请
                     </th>
                     <th>
-                        设为已读
+                        拒绝申请
                     </th>
                 </tr>
             </thead>
@@ -41,31 +41,31 @@
 
                     try
                     {
-                        foreach (Model.clubactivity i in Model)
+                        foreach (Model.newmember i in Model)
                         {
                             int temp = 1;
                             if (temp % 2 == 0)
                             {
                 <tr class="gradeX">
                     <td>@i.id</td>
-                    <td>@i.name</td>
-                    <td>@i.place</td>
-                    <td>@i.time</td>
-                    <td>@i.other</td>
-                    <td>@i.state</td>
-                    <td><a href="/manager/ActivityApplyResult/Read/@i.id">设为已读</a></td>
+                    <td>@Common.User.GetUserName(i.userID)</td>
+                    <td>@i.userID</td>
+                    <td>@Common.Club.getClubName(i.clubID)</td>
+                    <td>@i.time.ToString()</td>
+                    <td><a href="/manager/NewMember/Allow/@i.id">通过申请</a></td>
+                    <td><a href="/manager/NewMember/Deny/@i.id">拒绝申请</a></td>
                 </tr>
                             }
                             else
                             {
                 <tr class="odd gradeX">
                     <td>@i.id</td>
-                    <td>@i.name</td>
-                    <td>@i.place</td>
-                    <td>@i.time</td>
-                    <td>@i.other</td>
-                    <td>@i.state</td>
-                    <td><a href="/manager/ActivityApplyResult/Read/@i.id">设为已读</a></td>
+                    <td>@Common.User.GetUserName(i.userID)</td>
+                    <td>@i.userID</td>
+                    <td>@Common.Club.getClubName(i.clubID)</td>
+                    <td>@i.time.ToString()</td>
+                    <td><a href="/manager/NewMember/Allow/@i.id">通过申请</a></td>
+                    <td><a href="/manager/NewMember/Deny/@i.id">拒绝申请</a></td>
                 </tr>
                             }
                         }

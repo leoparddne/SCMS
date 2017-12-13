@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-12-13 21:00:09
+Date: 2017-12-14 02:22:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,7 +26,7 @@ CREATE TABLE `club` (
   `logo` varchar(255) NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of club
@@ -58,7 +58,7 @@ INSERT INTO `club` VALUES ('25', '测试社团申请', '0', '/Content/images/com
 INSERT INTO `club` VALUES ('26', '测试社团申请', '0', '/Content/images/comment/2.jpg', '2017-12-13 00:58:17');
 INSERT INTO `club` VALUES ('27', '测试社团申请', '0', '/Content/images/comment/2.jpg', '2017-12-13 00:58:18');
 INSERT INTO `club` VALUES ('28', '测试社团申请', '0', '/Content/images/comment/2.jpg', '2017-12-13 00:58:19');
-INSERT INTO `club` VALUES ('29', '测试2', '0', '/Content/images/comment/2.jpg', '2017-12-13 00:59:45');
+INSERT INTO `club` VALUES ('30', '测试2', '0', '/Content/images/comment/2.jpg', '2017-12-14 01:48:27');
 
 -- ----------------------------
 -- Table structure for clubactivity
@@ -73,14 +73,14 @@ CREATE TABLE `clubactivity` (
   `other` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `state` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of clubactivity
 -- ----------------------------
 INSERT INTO `clubactivity` VALUES ('1', '2', 'a', 'a', '2017-11-30 23:02:38', null, '1');
 INSERT INTO `clubactivity` VALUES ('2', '2', 'ab', 'a', '2017-11-30 23:03:02', null, '1');
-INSERT INTO `clubactivity` VALUES ('3', '6', '测试活动', '测试场地', '2017-12-30 20:45:52', null, '2');
+INSERT INTO `clubactivity` VALUES ('10', '2', '测试测试测试', '测试测试测试', '0001-01-01 00:00:00', '测试测试测试测试', '0');
 
 -- ----------------------------
 -- Table structure for clubmanager
@@ -91,12 +91,13 @@ CREATE TABLE `clubmanager` (
   `cludID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of clubmanager
 -- ----------------------------
 INSERT INTO `clubmanager` VALUES ('1', '6', '1');
+INSERT INTO `clubmanager` VALUES ('2', '30', '1');
 
 -- ----------------------------
 -- Table structure for clubmember
@@ -108,13 +109,15 @@ CREATE TABLE `clubmember` (
   `clubid` int(11) NOT NULL,
   `date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of clubmember
 -- ----------------------------
 INSERT INTO `clubmember` VALUES ('8', '1', '6', '2017-12-12 01:58:13');
 INSERT INTO `clubmember` VALUES ('9', '1', '8', '2017-12-12 01:58:18');
+INSERT INTO `clubmember` VALUES ('10', '1', '6', '2017-12-13 21:44:57');
+INSERT INTO `clubmember` VALUES ('11', '1', '6', '2017-12-13 21:49:17');
 
 -- ----------------------------
 -- Table structure for comment
@@ -179,13 +182,13 @@ CREATE TABLE `newclub` (
   `describe` varchar(255) CHARACTER SET utf8 NOT NULL,
   `state` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of newclub
 -- ----------------------------
-INSERT INTO `newclub` VALUES ('1', '测试社团申请', '1', '/Content/images/comment/2.jpg', '测试社团描述', '1');
-INSERT INTO `newclub` VALUES ('2', '测试', '1', '/Content/images/comment/2.jpg', '测试', '1');
+INSERT INTO `newclub` VALUES ('1', '测试社团申请', '1', '/Content/images/comment/2.jpg', '测试社团描述', '0');
+INSERT INTO `newclub` VALUES ('2', '测试', '1', '/Content/images/comment/2.jpg', '测试', '0');
 INSERT INTO `newclub` VALUES ('3', '测试2', '1', '/Content/images/comment/2.jpg', '测试', '1');
 
 -- ----------------------------
@@ -206,8 +209,8 @@ CREATE TABLE `newmember` (
 -- ----------------------------
 -- Records of newmember
 -- ----------------------------
-INSERT INTO `newmember` VALUES ('8', '1', '3', '2017-12-11 16:32:40', null, null, '0');
-INSERT INTO `newmember` VALUES ('9', '1', '2', '2017-12-12 00:55:46', null, null, '3');
+INSERT INTO `newmember` VALUES ('8', '1', '6', '2017-12-11 16:32:40', '2017-12-13 21:49:17', '1', '1');
+INSERT INTO `newmember` VALUES ('9', '1', '6', '2017-12-12 00:55:46', '2017-12-13 21:49:19', '1', '2');
 
 -- ----------------------------
 -- Table structure for teacher

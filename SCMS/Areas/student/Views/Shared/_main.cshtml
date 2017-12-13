@@ -74,8 +74,15 @@
                             </li>
                             <li>
                                 <a href="/student/NewClubs/Result">
-                                    <i class="menu-icon icon-bar-chart"></i>申请结果 <b class="label orange pull-right">
+                                    <i class="menu-icon icon-bar-chart"></i>入社申请结果 <b class="label orange pull-right">
                                         @ViewBag.ApplyResult
+                                    </b>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/student/ApplyClub/Result">
+                                    <i class="menu-icon icon-bar-chart"></i>创办社团结果 <b class="label green pull-right">
+                                        @ViewBag.ClubApplyResult
                                     </b>
                                 </a>
                             </li>
@@ -92,7 +99,7 @@
                             <li>
                                 <a href="/student/Activity/Mine">
                                     <i class="menu-icon icon-table"></i>我的活动 <b class="label orange pull-right">
-                                         @ViewBag.MineActivity
+                                        @ViewBag.MineActivity
                                     </b>
                                 </a>
                             </li>
@@ -130,35 +137,48 @@
                                         申请中的社团
                                     </p>
                                 </a>
+                                
                             </div>
+                            <div class="btn-box-row row-fluid">
+                                <a href="/student/ApplyClub/Add" class="btn-box big span4">
+                                    <i class=" icon-briefcase"></i><b>&nbsp;</b>
+                                    <p class="text-muted">
+                                        创办社团
+                                    </p>
+                                </a>
+                                <a href="/student/ApplyClub/" class="btn-box big span4">
+                                    <i class=" icon-bell"></i><b>@ViewBag.ClubApply</b>
+                                    <p class="text-muted">
+                                        创办中的社团
+                                    </p>
+                                </a>
+                            </div>
+                                @RenderBody()
 
-                        </div>
 
-                        @RenderBody()
-
-                       
-                        <!--/.module-->
+                                <!--/.module-->
+                            </div>
+                        <!--/.content-->
                     </div>
-                    <!--/.content-->
+                    <!--/.span9-->
                 </div>
-                <!--/.span9-->
+            </div>
+            <!--/.container-->
+        </div>
+        <!--/.wrapper-->
+        <div class="footer">
+            <div class="container">
+                <b class="copyright">©
+                <script>var d = new Date; document.write(d.getFullYear());</script> 鲍顺亮 </b>All rights reserved.
             </div>
         </div>
-        <!--/.container-->
-    </div>
-    <!--/.wrapper-->
-    <div class="footer">
-        <div class="container">
-            <b class="copyright">© <script>var d = new Date; document.write(d.getFullYear());</script> 鲍顺亮 </b>All rights reserved.
-        </div>
-    </div>
-    <script src="~/Content/admin/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="~/Content/admin/scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
-    <script src="~/Content/admin/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="~/Content/admin/scripts/flot/jquery.flot.js" type="text/javascript"></script>
-    <script src="~/Content/admin/scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
-    <script src="~/Content/admin/scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
-    <script src="~/Content/admin/scripts/common.js" type="text/javascript"></script>
+        <script src="~/Content/admin/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="~/Content/admin/scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+        <script src="~/Content/admin/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="~/Content/admin/scripts/flot/jquery.flot.js" type="text/javascript"></script>
+        <script src="~/Content/admin/scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
+        <script src="~/Content/admin/scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
+        <script src="~/Content/admin/scripts/common.js" type="text/javascript"></script>
 
 </body>
 </html>

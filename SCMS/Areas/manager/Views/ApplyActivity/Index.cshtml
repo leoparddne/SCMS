@@ -1,0 +1,117 @@
+﻿@{
+    Layout = "~/Areas/manager/Views/Shared/_main.cshtml";
+}
+<script src="~/Content/laydate/laydate.js"></script>
+
+<div class="content">
+    <div class="module">
+        <div class="module-head">
+            <h3>活动申请</h3>
+        </div>
+        <div class="module-body">
+            <div class="alert alert-error" style="display:none" id="errMSG">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>验证失败!</strong> 数据格式是否正确?
+            </div>
+            @{
+        try
+        {
+            if (!ViewBag.Success)
+            {
+                <div class="alert alert-error">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>申请提交失败!</strong> 申请数据是否正确?申请需提前24小时!
+                </div>
+
+
+
+    }
+    else
+    {
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>申请提交成功!</strong>  :)
+        </div>
+}
+}
+
+catch (Exception)
+{
+//this.Response.Redirect("/student/Home");
+}
+            }
+
+            <br>
+            <form class="form-horizontal row-fluid" action="/manager/ApplyActivity/Add" onsubmit="return check()">
+                <div class="control-group">
+                    <label class="control-label" for="basicinput">社团名称</label>
+                    <div class="controls">
+                        <select id="clubName" name="clubName" tabindex="1" data-placeholder="请选择.." class="span8">
+
+                            @{
+                        foreach (var item in Model.Activities)
+                        {
+                            <option value="@item">item</option>
+                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="basicinput">活动名称</label>
+                    <div class="controls">
+                        <input id="name" name="name" placeholder="请输入..." class="span8" type="text">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="basicinput">活动地点</label>
+                    <div class="controls">
+                        <input id="place" name="place" placeholder="请输入..." class="span8" type="text">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="basicinput">时间</label>
+                    <div class="controls">
+                        <input id="date" name="date" placeholder="请输入日期" class="laydate-icon" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="basicinput">其他信息</label>
+                    <div class="controls">
+                        <textarea id="other" name="other" class="span8" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls ">
+                        <button type="submit" class="btn-inverse btn-large">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function check() {
+
+            var name = document.getElementById("name").value;
+            var place = document.getElementById("place").value;
+            var date = document.getElementById("date").value;
+            var other = document.getElementById("clubName").value;
+            var errMSG = document.getElementById("errMSG");
+            //检测非空
+            if ((name != "") && (place != "") && (date != "") && (other != "")) {
+                errMSG.style.display = "none";
+                return true;
+            }
+            else {
+                errMSG.style.display = "";
+                return false;
+            }
+            
+
+            
+
+
+        }
+    </script>
+
+</div><!--/.content-->

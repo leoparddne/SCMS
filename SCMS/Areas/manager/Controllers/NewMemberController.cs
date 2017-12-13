@@ -6,7 +6,8 @@ using System.Web.Mvc;
 
 namespace SCMS.Areas.manager.Controllers
 {
-    public class NewMemberController : Controller
+    [ManagerExceptionFilter]
+    public class NewMemberController : BaseController
     {
         // GET: manager/NewMember
         public ActionResult Index()
@@ -31,18 +32,22 @@ namespace SCMS.Areas.manager.Controllers
         public ActionResult Allow(int id)
         {
             ExecquteUpdate(id,1);
-            return View("Index");
+            
+            //return View("Index");
+            return Redirect("/manager/NewMember");
         }
         public ActionResult Deny(int id)
         {
             ExecquteUpdate(id, 2);
-            return View("Index");
+            return Redirect("/manager/NewMember");
         }
         public void ExecquteUpdate(int id,int state)
         {
             var bll = new BLL.newMember();
             var model = bll.GetModel(p => p.id == id);
             model.state = state;
+            model.checkTime = DateTime.Now;
+            model.checkUser= Common.User.GetUserID(Session["Username"].ToString());
             //通过申请后加入社团成员表
             if (state==1)
             {
@@ -52,7 +57,7 @@ namespace SCMS.Areas.manager.Controllers
                 member.userid = model.userID;
                 new BLL.clubMember().Add(member);
             }
-            bll.Update(model,new[] { "id","state"});
+            bll.Update(model,new[] { "id","checkTime", "checkUser", "state"});
         }
     }
 }

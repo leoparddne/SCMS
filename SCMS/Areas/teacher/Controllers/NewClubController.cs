@@ -29,6 +29,11 @@ namespace SCMS.Areas.teacher.Controllers
             clubModel.logo = model.logo;
             clubModel.name = model.name;
             clubBLL.Add(clubModel);
+            //申请人设置为管理员
+            var manager = new Model.clubmanager();
+            manager.cludID = clubModel.id;
+            manager.userID = new BLL.newClub().GetModel(p => p.id == id).userID;
+            new BLL.clubManager().Add(manager);
             Response.Redirect("/teacher/NewClub/");
         }
         public void Deny(int id)
@@ -45,7 +50,7 @@ namespace SCMS.Areas.teacher.Controllers
         {
             var bll = new BLL.newClub();
             var model = bll.GetModel(p => p.id == id);
-            model.state = state;
+            model.state = state; 
             bll.Update(model, new[] { "id", "state" });
             //更新申请个数
             ViewBag.ClubApply = new BLL.newClub().GetRecordCount(p => p.state == 0);

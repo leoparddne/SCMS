@@ -13,6 +13,11 @@ namespace Common
             var name= new BLL.ClubBLL().GetModel(p => p.id == clubID).name;
             return name;
         }
+        public static int getClubID(string clubName)
+        {
+            var id = new BLL.ClubBLL().GetModel(p => p.name == clubName).id;
+            return id;
+        }
         public static bool HasJoinedClub(int userID,int clubID)
         {
             var bll = new BLL.clubMember();

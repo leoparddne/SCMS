@@ -148,6 +148,10 @@
     <Content Include="Areas\manager\Views\Activity\Mine.cshtml" />
     <Content Include="Areas\manager\Views\ActivityApplyResult\Index.cshtml" />
     <Content Include="Areas\manager\Views\NewMember\Index.cshtml" />
+    <Content Include="Areas\manager\Views\ApplyActivity\Index.cshtml" />
+    <Content Include="Areas\student\Views\ApplyClub\Add.cshtml" />
+    <Content Include="Areas\student\Views\ApplyClub\Index.cshtml" />
+    <Content Include="Areas\student\Views\ApplyClub\Result.cshtml" />
     <None Include="Areas\student\Views\Login\Login.cshtml" />
     <None Include="Areas\student\Views\Home\Index.cshtml" />
     <Content Include="Content\admin\activity.html" />
@@ -228,6 +232,22 @@
     <Content Include="Content\js\modernizr-2.8.3.min.js" />
     <Content Include="Content\js\plugins.js" />
     <Content Include="Content\js\wow.min.js" />
+    <Content Include="Content\laydate\laydate.js" />
+    <Content Include="Content\laydate\need\laydate.css" />
+    <Content Include="Content\laydate\skins\dahong\icon.png" />
+    <Content Include="Content\laydate\skins\dahong\laydate.css" />
+    <Content Include="Content\laydate\skins\danlan\icon.png" />
+    <Content Include="Content\laydate\skins\danlan\laydate.css" />
+    <Content Include="Content\laydate\skins\default\icon.png" />
+    <Content Include="Content\laydate\skins\default\laydate.css" />
+    <Content Include="Content\laydate\skins\molv\icon.png" />
+    <Content Include="Content\laydate\skins\molv\laydate.css" />
+    <Content Include="Content\laydate\skins\qianhuang\icon.png" />
+    <Content Include="Content\laydate\skins\qianhuang\laydate.css" />
+    <Content Include="Content\laydate\skins\yahui\icon.png" />
+    <Content Include="Content\laydate\skins\yahui\laydate.css" />
+    <Content Include="Content\laydate\skins\yalan\icon.png" />
+    <Content Include="Content\laydate\skins\yalan\laydate.css" />
     <Content Include="Content\login\askgreen.png" />
     <Content Include="Content\login\errorred.png" />
     <Content Include="Content\login\google_jquery-ui.min.js" />
@@ -328,7 +348,9 @@
     <Compile Include="Areas\manager\Controllers\NewMemberController.cs" />
     <Compile Include="Areas\manager\Controllers\PersonalCenterController.cs" />
     <Compile Include="Areas\manager\managerAreaRegistration.cs" />
+    <Compile Include="Areas\manager\Models\ApplyActivity.cs" />
     <Compile Include="Areas\student\Controllers\ActivityController.cs" />
+    <Compile Include="Areas\student\Controllers\ApplyClubController.cs" />
     <Compile Include="Areas\student\Controllers\BaseController.cs" />
     <Compile Include="Areas\student\Controllers\ClubsController.cs" />
     <Compile Include="Areas\student\Controllers\HomeController.cs" />
@@ -387,8 +409,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\admin\Models\" />
     <Folder Include="Areas\admin\Views\Shared\" />
-    <Folder Include="Areas\manager\Models\" />
-    <Folder Include="Areas\manager\Views\ApplyActivity\" />
     <Folder Include="Areas\teacher\Models\" />
     <Folder Include="Models\" />
   </ItemGroup>

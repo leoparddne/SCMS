@@ -46,6 +46,10 @@ namespace SCMS.Areas.student.Controllers
             ViewBag.mineActivity = count;
             //获取未读申请结果个数
             ViewBag.ApplyResult = new BLL.newMember().GetRecordCount(p => p.userID == userModel.id & p.state != 0 & p.state != 3);
+            //未读的创办社团消息
+            ViewBag.ClubApplyResult = new BLL.newClub().GetModels(p => p.userID == userModel.id & p.state != 0 & p.state != 3).ToList().Count;
+            //申请中的社团
+            ViewBag.ClubApply = new BLL.newClub().GetModels(p => p.userID == userModel.id & p.state == 0).ToList().Count;
         }
     }
     //自定义的异常处理
