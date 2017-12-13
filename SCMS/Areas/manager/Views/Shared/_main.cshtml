@@ -70,14 +70,21 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="/teacher/Clubs/"><i class="menu-icon icon-paste"></i>社团 </a>
+                                <a href="/manager/Clubs/"><i class="menu-icon icon-paste"></i>社团 </a>
                             </li>
                             <li>
-                                <a href="/teacher/Activity/">
-                                    <i class="menu-icon icon-bar-chart"></i>社团活动 
+                                <a href="/manager/Activity/">
+                                    <i class="menu-icon icon-bar-chart"></i>社团活动
                                 </a>
                             </li>
-
+                            <li>
+                                <a href="/manager/ActivityApplyResult/">
+                                    <i class="menu-icon icon-bar-chart"></i>活动申请结果
+                                    <b class="label green pull-right">
+                                        @ViewBag.Result
+                                    </b>
+                                </a>
+                            </li>
                         </ul>
                         
                     </div>
@@ -88,20 +95,20 @@
                     <div class="content">
                         <div class="btn-controls">
                             <div class="btn-box-row row-fluid">
-                                <a href="/teacher/Clubs/" class="btn-box big span4">
+                                <a href="/manager/Clubs/" class="btn-box big span4">
                                     <i class=" icon-random"></i><b>@ViewBag.Clubs</b>
                                     <p class="text-muted">
                                         总社团数
                                     </p>
                                 </a>
-                                <a href="/teacher/NewClub/" class="btn-box big span4">
-                                    <i class="icon-user"></i><b>@ViewBag.ClubApply</b>
+                                <a href="/manager/NewMember/" class="btn-box big span4">
+                                    <i class="icon-user"></i><b>@ViewBag.NewMember</b>
                                     <p class="text-muted">
-                                        社团申请
+                                        入社申请
                                     </p>
                                 </a>
-                                <a href="/teacher/NewActivity/" class="btn-box big span4">
-                                    <i class="icon-money"></i><b>@ViewBag.ActivityApply</b>
+                                <a href="/manager/NewActivity/" class="btn-box big span4">
+                                    <i class="icon-money"></i><b>  </b>
                                     <p class="text-muted">
                                         活动申请
                                     </p>

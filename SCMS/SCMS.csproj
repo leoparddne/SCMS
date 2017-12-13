@@ -142,6 +142,12 @@
     <Content Include="Areas\manager\Views\Home\Index.cshtml" />
     <Content Include="Areas\manager\Views\PersonalCenter\Index.cshtml" />
     <Content Include="Areas\manager\Views\Shared\_main.cshtml" />
+    <Content Include="Areas\manager\Views\Clubs\Index.cshtml" />
+    <Content Include="Areas\manager\Views\Clubs\Info.cshtml" />
+    <Content Include="Areas\manager\Views\Activity\Info.cshtml" />
+    <Content Include="Areas\manager\Views\Activity\Mine.cshtml" />
+    <Content Include="Areas\manager\Views\ActivityApplyResult\Index.cshtml" />
+    <Content Include="Areas\manager\Views\NewMember\Index.cshtml" />
     <None Include="Areas\student\Views\Login\Login.cshtml" />
     <None Include="Areas\student\Views\Home\Index.cshtml" />
     <Content Include="Content\admin\activity.html" />
@@ -311,10 +317,15 @@
     <Compile Include="App_Start\isAuthorizeAttribute.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
+    <Compile Include="Areas\manager\Controllers\ActivityApplyResultController.cs" />
+    <Compile Include="Areas\manager\Controllers\ActivityController.cs" />
+    <Compile Include="Areas\manager\Controllers\ApplyActivityController.cs" />
     <Compile Include="Areas\manager\Controllers\BaseController.cs" />
     <Compile Include="Areas\admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\manager\Controllers\ClubsController.cs" />
     <Compile Include="Areas\manager\Controllers\HomeController.cs" />
     <Compile Include="Areas\manager\Controllers\LoginController.cs" />
+    <Compile Include="Areas\manager\Controllers\NewMemberController.cs" />
     <Compile Include="Areas\manager\Controllers\PersonalCenterController.cs" />
     <Compile Include="Areas\manager\managerAreaRegistration.cs" />
     <Compile Include="Areas\student\Controllers\ActivityController.cs" />
@@ -377,6 +388,7 @@
     <Folder Include="Areas\admin\Models\" />
     <Folder Include="Areas\admin\Views\Shared\" />
     <Folder Include="Areas\manager\Models\" />
+    <Folder Include="Areas\manager\Views\ApplyActivity\" />
     <Folder Include="Areas\teacher\Models\" />
     <Folder Include="Models\" />
   </ItemGroup>

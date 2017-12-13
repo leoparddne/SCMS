@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-12-13 01:02:25
+Date: 2017-12-13 21:00:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -80,7 +80,7 @@ CREATE TABLE `clubactivity` (
 -- ----------------------------
 INSERT INTO `clubactivity` VALUES ('1', '2', 'a', 'a', '2017-11-30 23:02:38', null, '1');
 INSERT INTO `clubactivity` VALUES ('2', '2', 'ab', 'a', '2017-11-30 23:03:02', null, '1');
-INSERT INTO `clubactivity` VALUES ('3', '6', '测试活动', '测试场地', '2017-12-30 20:45:52', null, '0');
+INSERT INTO `clubactivity` VALUES ('3', '6', '测试活动', '测试场地', '2017-12-30 20:45:52', null, '2');
 
 -- ----------------------------
 -- Table structure for clubmanager
@@ -91,11 +91,12 @@ CREATE TABLE `clubmanager` (
   `cludID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of clubmanager
 -- ----------------------------
+INSERT INTO `clubmanager` VALUES ('1', '6', '1');
 
 -- ----------------------------
 -- Table structure for clubmember

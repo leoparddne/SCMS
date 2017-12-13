@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace SCMS.Areas.manager.Controllers
 {
+    [ManagerExceptionFilter]
     public class PersonalCenterController : Controller
     {
         // GET: manager/PersonalCenter
