@@ -140,6 +140,8 @@
     <Content Include="Areas\student\Views\Activity\Mine.cshtml" />
     <Content Include="Areas\student\Views\Clubs\Info.cshtml" />
     <Content Include="Areas\manager\Views\Home\Index.cshtml" />
+    <Content Include="Areas\manager\Views\PersonalCenter\Index.cshtml" />
+    <Content Include="Areas\manager\Views\Shared\_main.cshtml" />
     <None Include="Areas\student\Views\Login\Login.cshtml" />
     <None Include="Areas\student\Views\Home\Index.cshtml" />
     <Content Include="Content\admin\activity.html" />
@@ -313,6 +315,7 @@
     <Compile Include="Areas\admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\manager\Controllers\HomeController.cs" />
     <Compile Include="Areas\manager\Controllers\LoginController.cs" />
+    <Compile Include="Areas\manager\Controllers\PersonalCenterController.cs" />
     <Compile Include="Areas\manager\managerAreaRegistration.cs" />
     <Compile Include="Areas\student\Controllers\ActivityController.cs" />
     <Compile Include="Areas\student\Controllers\BaseController.cs" />
@@ -374,7 +377,6 @@
     <Folder Include="Areas\admin\Models\" />
     <Folder Include="Areas\admin\Views\Shared\" />
     <Folder Include="Areas\manager\Models\" />
-    <Folder Include="Areas\manager\Views\Shared\" />
     <Folder Include="Areas\teacher\Models\" />
     <Folder Include="Models\" />
   </ItemGroup>

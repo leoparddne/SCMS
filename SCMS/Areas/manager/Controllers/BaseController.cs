@@ -21,7 +21,7 @@ namespace SCMS.Areas.manager.Controllers
             string name = ViewBag.Username;
             var userModel = user.GetModel(p => p.name == name);
             //验证用户权限
-            if (!new BLL.clubMember().Exist(p => p.userid == userModel.id))
+            if (!new BLL.clubManager().Exist(p => p.userID == userModel.id))
             {
                 //返回用户登录界面
                 Response.Redirect("/manager/Login/Login");

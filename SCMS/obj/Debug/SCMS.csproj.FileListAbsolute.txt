@@ -475,8 +475,6 @@ E:\SCMS_GIT\SCMS\SCMS\bin\Microsoft.AI.Web.xml
 E:\SCMS_GIT\SCMS\SCMS\bin\Microsoft.AI.WindowsServer.xml
 E:\SCMS_GIT\SCMS\SCMS\bin\Microsoft.ApplicationInsights.xml
 E:\SCMS_GIT\SCMS\SCMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\SCMS_GIT\SCMS\SCMS\bin\Newtonsoft.Json.pdb
-E:\SCMS_GIT\SCMS\SCMS\bin\Newtonsoft.Json.xml
 E:\SCMS_GIT\SCMS\SCMS\bin\System.Web.Razor.xml
 E:\SCMS_GIT\SCMS\SCMS\bin\System.Web.Webpages.xml
 E:\SCMS_GIT\SCMS\SCMS\bin\System.Web.Webpages.Deployment.xml
